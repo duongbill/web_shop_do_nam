@@ -67,7 +67,7 @@
           </div>
           <h3>Áo Adidas </h3>
           <p class="price">290.000đ</p>
-          <button  class="click-buy">Mua ngay</button>
+          <button  class="click-buy js-buy-now ">Mua ngay</button>
       </div>
       <div class="product-item">
           <div class="image-container">
@@ -76,7 +76,7 @@
           </div>
           <h3>Áo khoác Gucci</h3>
           <p class="price">5.800.000đ</p>
-          <button  class="click-buy">Mua ngay</button>
+          <button  class="click-buy js-buy-now ">Mua ngay</button>
       </div>
       <div class="product-item">
           <div class="image-container">
@@ -85,7 +85,7 @@
           </div>
           <h3>Áo MLB logo đen</h3>
           <p class="price">900.000đ</p>
-          <button class="click-buy">Mua ngay</button>
+          <button class="click-buy js-buy-now ">Mua ngay</button>
       </div>
       <div class="product-item">
           <div class="image-container">
@@ -94,14 +94,14 @@
           </div>
           <h3>Áo NYC họa tiết thêu NY đen</h3>
           <p class="price">1.200.000đ</p>
-          <button class="click-buy">Mua ngay</button>
+          <button class="click-buy js-buy-now ">Mua ngay</button>
       </div>
   </div>
   
   <div id="muangay js-modal">
-    <div class="modal">
+    <div class="modal js-modal">
         <div class="modal-container js-modal-container">
-        <div class="button-close js-close">
+        <div class="button-close js-modal-close">
             <i class="ti-close"></i>
         </div>
 
@@ -110,7 +110,7 @@
         </div>
 
         <div class="modal-body">
-            <div class="size-options">
+           <div class="size-options">
                 <h3>Size: </h3>
                 <input type="radio" id="size-s" name="size" class="size-option" value="s">
                 <label for="size-s">S</label>
@@ -153,14 +153,14 @@
                   <label for="phone">Số điện thoại</label>
                   <input type="tel" id="phone" placeholder="VD: 098 508 2004">
                 </div>
-                <label for="pttt">Phương thức thanh toán</label>
+                <label for="pttt">Đơn vị vận chuyển mong muốn</label>
                 <select id="pttt">
-                  <option value="pt1" selected>Thanh toán trực tiếp</option>
-                  <option value="pt2" selected>Chuyển khoản</option>
-                  <!-- Add more country options as needed -->
+                  <option value="pt1" selected>Bưu điện</option>
+                  <option value="pt2" selected>J&T</option>
+                  <option value="pt3" selected>Giao hàng tiết kiệm</option>
                 </select>
               
-                <button type="submit">Đồng ý thanh toán</button>
+                <button class="dytt js-dytt" type="submit">Hoàn tất mua hàng</button>
               </div>  
             
         </div>
@@ -217,6 +217,41 @@
         </script>
 
 <!-- modal -->
+<script>
+    const buyBtns = document.querySelectorAll('.js-buy-now')
+
+    const modal=document.querySelector('.js-modal')
+
+    const modalClose=document.querySelector('.js-modal-close')
+
+    const dytt=document.querySelector('.js-dytt')
+
+    function showBuyNow()
+    {
+        modal.classList.add('open')
+    }
+
+    function hiddenBuyNow()
+    {
+        modal.classList.remove('open')
+    }
+
+    for (const buyBtn of buyBtns) {
+        buyBtn.addEventListener('click', showBuyNow)
+    }
+
+    modalClose.addEventListener('click', hiddenBuyNow )
+
+    function doneDYTT()
+    {
+        alert("Mua hàng thành công")
+        modal.classList.remove('open')
+    }
+
+    dytt.addEventListener('click', doneDYTT)
+
+    
+</script>
 
 
 </body>

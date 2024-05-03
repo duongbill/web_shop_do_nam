@@ -277,7 +277,10 @@ button.js-buy-ticket {
 .button-close:hover {
   opacity:1;
 }
-
+.ti-close{
+  color:white;
+  
+}
 button.pay a {
   text-decoration: none;
 }
