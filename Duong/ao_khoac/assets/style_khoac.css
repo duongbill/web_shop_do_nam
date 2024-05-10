@@ -115,6 +115,31 @@ tu tong quan den chi tieticd
     background-size: cover;
 }
 
+.user {
+
+  position: fixed;
+  top: 8px;
+  right: 20px;
+  font-size: 28px;
+  z-index: 90;
+}
+.cart {
+  color: white;
+  position: fixed;
+  top: 8px;
+  right: 80px;
+  font-size: 28px;
+  z-index: 58;
+}
+i.ti-user {
+  color: white;
+}
+a{
+  text-decoration: none;
+}
+i.ti-shopping-cart{
+  color:white;
+}
 
 
 
