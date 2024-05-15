@@ -232,9 +232,10 @@ i.ti-shopping-cart{
 }
 .click-pick,.click-buy{
   margin-top: 5px;
-  padding: 5px;
+  padding: 6px;
   background-color: #ccc;
   color:black;
+  border: none;
 }
 .click-buy{
   background-color:red;
@@ -284,6 +285,9 @@ i.ti-shopping-cart{
   text-decoration: none;
   list-style-type: none;
   padding:3px;
+}
+button.button-active {
+  background-color: #ccc;
 }
 
 /* modal */

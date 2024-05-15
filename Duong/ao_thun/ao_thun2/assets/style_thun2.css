@@ -116,7 +116,7 @@ margin-left: 10px;
 }
 /* content */
 .content{
-height: 1000px ;
+height: 600px ;
 }
 .container {
 overflow: auto; /* Giải quyết vấn đề float */
@@ -125,7 +125,7 @@ overflow: auto; /* Giải quyết vấn đề float */
 .left {
 float: left;
 width: 15%;
-height: 1000px; /* Chiều cao đầy đủ của viewport */
+height: 600px; /* Chiều cao đầy đủ của viewport */
 background-color: rgb(255, 215, 163); /* Màu nền cho phần 30% */
 }
 .left h2{
@@ -164,7 +164,7 @@ padding-top:10px ;
 .right {
 float: right;
 width: 85%;
-height: 1000px; /* Chiều cao đầy đủ của viewport */
+height: 600px; /* Chiều cao đầy đủ của viewport */
 background-color: white; /* Màu nền cho phần 70% */
 }
 .right h1{
@@ -205,10 +205,11 @@ font-weight: bold;
 color: red;
 }
 .click-pick,.click-buy{
-margin-top: 5px;
-padding: 5px;
-background-color: #ccc;
-color:black;
+  margin-top: 5px;
+  padding: 8px;
+  background-color: #ccc;
+  color:black;
+  border: none;
 }
 .click-buy{
 background-color:red;
@@ -255,6 +256,7 @@ color:#ccc;
 
 .button-group .button-active a,.button-group .button a{
 text-decoration: none;
+padding:3px;
 }
 
 /* modal */
@@ -572,6 +574,9 @@ background-color: red;
   margin-top: 20px;
 }
 
+button.button {
+  background-color: #ccc;
+}
 
 
 
