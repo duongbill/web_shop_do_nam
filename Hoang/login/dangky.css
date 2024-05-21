@@ -4,32 +4,32 @@
     margin: 0;
     /* kp tinh toan kich thuoc */
     box-sizing: border-box; 
-}
-html
-{
+  }
+  html
+  {
     font-family:Arial, Helvetica, sans-serif;
-}
-/* chu y
-lam từ ngoài vào trong
-từ trên xuống dưới 
-tu tong quan den chi tieticd
-
-1. vi tri 
-2 kichs thuoc
-3 màu sắc
-4 kiểu chữ 
-*/
-
-.clear
-{
+  }
+  /* chu y
+  lam từ ngoài vào trong
+  từ trên xuống dưới 
+  tu tong quan den chi tieticd
+  
+  1. vi tri 
+  2 kichs thuoc
+  3 màu sắc
+  4 kiểu chữ 
+  */
+  
+  .clear
+  {
     clear:both;
-}
-#main
-{
-
-}
-#header
-{
+  }
+  #main
+  {
+  
+  }
+  #header
+  {
     height: 46px;
     background-color: #000;
     position: fixed;
@@ -37,86 +37,86 @@ tu tong quan den chi tieticd
     left:0;
     right:0;
     z-index: 1;
-
-}
-#nav, .sub_more
-{
+  
+  }
+  #nav, .sub_more
+  {
     list-style-type: none;
-}
-#nav > li 
-{
+  }
+  #nav > li 
+  {
     display: inline-block;
     /*  navigation */
-} 
-#nav li{
+  } 
+  #nav li{
     position: relative;
-}
-
-#nav li a{
+  }
+  
+  #nav li a{
     color:white;
     text-decoration: none;
     line-height: 46px;
     padding: 0 24px;
     display:block;
-
-}
-#nav > li:hover>  a{
+  
+  }
+  #nav > li:hover>  a{
     color:#000;
     background-color: #ccc;
     background-size: 100%;
     display:inline-block;
-}
-#nav .sub_more
-{
+  }
+  #nav .sub_more
+  {
   width:131.13px;
     display: none;
     position: absolute;
     background-color: #fff;
     color:#000;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
-
-}
-#nav li:hover  .sub_more
-{
+  
+  }
+  #nav li:hover  .sub_more
+  {
     display:block;
-}
-#nav .sub_more >li > a{
+  }
+  #nav .sub_more >li > a{
     /* nghĩa là đang trỏ vào mấy thằng thẻ a cấp 2*/
     color: black;
     padding:0 12px;
     font-size: 14 px;
-}
-#nav .sub_more >li:hover > a{
+  }
+  #nav .sub_more >li:hover > a{
     color:#000;
     background-color: #ccc;
     background-size: 100%;
     display:block;
     
-}
-#nav{
+  }
+  #nav{
     display: inline-block;
-}
-
-.ti-angle-down{
+  }
+  
+  .ti-angle-down{
     font-size: 10px;
-}
-
-.ti-angle-down:before {
+  }
+  
+  .ti-angle-down:before {
   content: "\e64b";
   margin-left: 10px;
-}
-.ti-menu{
+  }
+  .ti-menu{
   position: fixed;
   top: 8px;
   right: 9px;
-
-}
-
-.content{
+  
+  }
+  
+  .content{
     width: 100%;
     height: 550px; 
-}
-.form-container {
+  }
+  .form-container {
   width: 400px;
   height: 500px;
   background-color: #fff;
@@ -126,55 +126,55 @@ tu tong quan den chi tieticd
   padding: 20px 30px;
   margin-left:36%;
   margin-top:100px;
-}
-
-.title {
+  }
+  
+  .title {
   text-align: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   margin: 10px 0 30px 0;
   font-size: 28px;
   font-weight: 800;
-}
-
-.form {
+  }
+  
+  .form {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 18px;
   margin-bottom: 15px;
-}
-
-.input {
+  }
+  
+  .input {
   border-radius: 20px;
   border: 1px solid #c0c0c0;
   outline: 0 !important;
   box-sizing: border-box;
   padding: 12px 15px;
-}
-
-.page-link {
- 
+  }
+  
+  .page-link {
+  
   margin: 0;
   text-align: end;
   color: #747474;
- 
-}
-
-.page-link-label {
+  
+  }
+  
+  .page-link-label {
   cursor: pointer;
   font-size: 12px;
   font-weight: 600;
-}
-a{
-  color:#000000;
- 
-}
-.page-link-label:hover {
+  }
+  a{
+  color:#747474;
+  
+  }
+  .page-link-label:hover {
   color: #000;
-}
-
-.form-btn {
+  }
+  
+  .form-btn {
   padding: 10px 15px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -185,37 +185,37 @@ a{
   color: white;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.form-btn:active {
+  }
+  
+  .form-btn:active {
   box-shadow: none;
-}
-
-.sign-up-label {
+  }
+  
+  .sign-up-label {
   margin: 0;
   font-size: 10px;
   color: #747474;
   font-family: 'Open Sans', sans-serif;
-}
-
-.sign-up-link {
+  }
+  
+  .sign-up-link {
   margin-left: 1px;
   font-size: 11px;
   text-decoration: underline;
   cursor: pointer;
   font-weight: 800;
-}
-
-.buttons-container {
+  }
+  
+  .buttons-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 20px;
   gap: 15px;
-}
-
-.apple-login-button,
+  }
+  
+  .apple-login-button,
     .google-login-button {
   border-radius: 20px;
   box-sizing: border-box;
@@ -228,42 +228,42 @@ a{
   align-items: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   gap: 5px;
-}
-
-.apple-login-button {
+  }
+  
+  .apple-login-button {
   background-color: #0866ff;
   color: #fff;
   border: none;
-}
-
-.google-login-button {
+  }
+  
+  .google-login-button {
   border: 2px solid #747474;
-}
-.ti-facebook{
+  }
+  .ti-facebook{
   font-size:14px;
-}
-
-
-/* footer */
-.footer {
+  }
+  
+  
+  /* footer */
+  .footer {
   background-color: black ;
   padding: 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   color:white;  
-}
-.company-info p{
+  }
+  .company-info p{
   margin-top:10px;
   margin-bottom: 10px;
-}
-.social-links {
+  }
+  .social-links {
   display: flex;
-
-}
-.social-links a {
+  
+  }
+  .social-links a {
   color: white;
   font-size: 35px;
   margin-right: 20px;
@@ -271,27 +271,144 @@ a{
   transition: color 0.3s; 
   float:left;
   margin-top: 10px;
-}
-
-.social-links a:hover {
+  }
+  
+  .social-links a:hover {
   color:  burlywood; 
-}
-
-.company-info,
-.contact-info
-{
+  }
+  
+  .company-info,
+  .contact-info
+  {
   flex-basis: 40%;
-}
-.contact-info p{
+  }
+  .contact-info p{
   margin-top:5px;
-}
-.contact-info a{
+  }
+  .contact-info a{
   text-decoration: none;
   color:white;
-}
-.copyright {
+  }
+  .copyright {
   width: 100%;
   text-align: center;
   margin-top: 20px;
-}
-
+  }
+  
+  
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: system-ui;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /*  Row and Column Styles */
+  .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto; /* Center the row using margin */
+    padding-top: 100px;  /* Add spacing above the row */
+  }
+  
+  .colm-logo {
+    flex: 0 0 50%;
+    text-align: left;
+  }
+  
+  .colm-form {
+    flex: 0 0 40%;
+    text-align: center;
+  }
+  
+  .colm-logo img {
+    max-width: 800px;
+    padding-right: 100px;
+  }
+  
+  /*  Form Styles */
+  .form-container {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+    max-width: 400px;
+  }
+  
+  input,
+  .btn-login {
+    width: 100%;
+    margin: 5px 0;
+    height: 45px;
+    vertical-align: middle;
+    font-size: 16px;
+  }
+  
+  input {
+    border: 1px solid #dddfe2;
+    color: #333;
+    padding: 0 8px;
+    outline: none;
+    border-radius: 6px;
+  }
+  
+  input:focus {
+    border-color: rgb(0, 0, 0);
+    box-shadow: 0 0 0 2px #e7f3ff;
+  }
+  
+  .btn-login {
+    background-color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 100px;
+    font-size: 20px;
+    padding: 0 16px;
+    color: #fff;
+    font-weight: 700;
+   
+  }
+  
+  .form-container a {
+    display: block;
+    color: #1877f2;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 0 20px;
+    border-bottom: 1px solid #ffffff;
+    
+  }
+  
+  .btn-new {
+    background-color: #42b72a;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0 16px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  
+  .btn-new1 {
+    background-color: #3718e7;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 48px;
+    padding: 0 16px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 20px;
+  }
