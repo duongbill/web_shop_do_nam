@@ -244,8 +244,13 @@ a{
 .ti-facebook{
   font-size:14px;
 }
-
-
+.apple-login-button a{
+  text-decoration: none;
+  color:white;
+}
+.google-login-button a{
+  text-decoration: none;
+}
 /* footer */
 .footer {
   background-color: black ;
