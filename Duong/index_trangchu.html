@@ -34,18 +34,19 @@
                 <li>
                     <a href="/Duc/index.html">QUẦN NAM</a>
                 </li>
-                <li><a href="#">ĐỒ THỂ THAO<i class="ti-angle-down"></i></a>
-                    <ul class="sub_more">
-                        <li><a href="/Hoang/dodabong/dungcubongda.html">Bóng đá</a></li>
-                        <li><a href="/Hoang/dodabong/dungcudabong3.html">Giày bóng đá</a></li>
-                        <li><a href="/Hoang/dodabong/dungcubongda2.html">Găng tay</a></li>
-                    </ul>
                 <li>
                     <a href="#">GIÀY DÉP</a>
                 </li>
                 <li>
-                    <a href="#">PHỤ KIỆN</a>
+                    <a href="#">TRANG SỨC</a>
                 </li>
+                <li><a href="#">PHỤ KIỆN<i class="ti-angle-down"></i></a>
+                    <ul class="sub_more">
+                        <li><a href="/Hoang/dodabong/dungcubongda.html">BÓNG ĐÁ</a></li>
+                        <li><a href="/Hoang/dodabong/dungcudabong3.html">GIÀY BÓNG ĐÁ</a></li>
+                        <li><a href="/Hoang/dodabong/dungcubongda2.html">GĂNG TAY</a></li>
+                    </ul>
+                <li>
                 <li>
                     <a href="/Duong/hethong_shop/index.html">HỆ THỐNG CỬA HÀNG</a>
                 </li>
@@ -79,7 +80,7 @@
 <div id="content">
 <!-- ao ban chay -->
 <div class="ao-ban-chay">
-    <h1>Sản phẩm bán chạy nhất</h1>
+    <h1>SẢN PHẨM NỔI BẬT</h1>
   
     <div class="product-container">
       <div class="product-item">
@@ -89,6 +90,7 @@
           </div>
           <h3>Áo Adidas </h3>
           <p class="price">290.000đ</p>
+          <button  class="click-cart js-cart">Thêm vào giỏ</button>
           <button  class="click-buy js-buy-now ">Mua ngay</button>
       </div>
       <div class="product-item">
@@ -98,6 +100,7 @@
           </div>
           <h3>Áo khoác Gucci</h3>
           <p class="price">5.800.000đ</p>
+          <button  class="click-cart js-cart">Thêm vào giỏ</button>
           <button  class="click-buy js-buy-now ">Mua ngay</button>
       </div>
       <div class="product-item">
@@ -107,6 +110,7 @@
           </div>
           <h3>Áo MLB logo đen</h3>
           <p class="price">900.000đ</p>
+          <button  class="click-cart js-cart">Thêm vào giỏ</button>
           <button class="click-buy js-buy-now ">Mua ngay</button>
       </div>
       <div class="product-item">
@@ -116,9 +120,56 @@
           </div>
           <h3>Áo NYC họa tiết thêu NY đen</h3>
           <p class="price">1.200.000đ</p>
+          <button  class="click-cart js-cart">Thêm vào giỏ</button>
           <button class="click-buy js-buy-now ">Mua ngay</button>
       </div>
   </div>
+
+  <div class="product-container">
+    <div class="product-item">
+        <div class="image-container">
+            <img src="./assets/img/ao/ao5.webp" alt="Product 1"    class="first-image">
+            <img src="./assets/img/ao/ao5_1.webp" alt="Second Image 1"  class="second-image">
+        </div>
+        <h3>Áo Boston </h3>
+        <p class="price">300.000đ</p>
+        <button  class="click-cart js-cart">Thêm vào giỏ</button>
+        <button  class="click-buy js-buy-now ">Mua ngay</button>
+    </div>
+    <div class="product-item">
+        <div class="image-container">
+            <img src="./assets/img/ao/ao6.webp" alt="Product 2"   class="first-image">
+            <img src="./assets/img/ao/ao6__1.webp" alt="Second Image 2" class="second-image">
+        </div>
+        <h3>Áo NYC W</h3>
+        <p class="price">800.000đ</p>
+        <button  class="click-cart js-cart">Thêm vào giỏ</button>
+        <button  class="click-buy js-buy-now ">Mua ngay</button>
+    </div>
+    <div class="product-item">
+        <div class="image-container">
+            <img src="./assets/img/ao/ao_7.webp" alt="Product 3"  class="first-image">
+            <img src="./assets/img/ao/ao7_1.webp" alt="Second Image 3" class="second-image">
+        </div>
+        <h3>Áo adidas1</h3>
+        <p class="price">90.000đ</p>
+        <button  class="click-cart js-cart">Thêm vào giỏ</button>
+        <button class="click-buy js-buy-now ">Mua ngay</button>
+    </div>
+    <div class="product-item">
+        <div class="image-container">
+            <img src="./assets/img/ao/ao8.webp" alt="Product 4"  class="first-image">
+            <img src="./assets/img/ao/ao8_1.webp" alt="Second Image 4" class="second-image">
+        </div>
+        <h3>Áo Adidas2</h3>
+        <p class="price">200.000đ</p>
+        <button  class="click-cart js-cart">Thêm vào giỏ</button>
+        <button class="click-buy js-buy-now ">Mua ngay</button>
+    </div>
+</div>
+
+
+  
   
   <div id="muangay js-modal">
     <div class="modal js-modal">
@@ -195,9 +246,106 @@
       <!-- video quang ba -->
       <h1>EIGHT SHOP </h1>
   <div class="video-container">
-    <iframe width="100%" height="100%" class="vid_intro" src="https://www.youtube.com/embed/OTFBOjTJH30;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+    <iframe width="94%" height="100%" class="vid_intro" src="https://www.youtube.com/embed/OTFBOjTJH30;autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
   </div>
 </div>
+
+<div id="content3"> 
+    <h1 >FeedBack của khách hàng</h1>
+    <div class="container-fb">
+        <div class="row">
+          <div class="col">
+            <div class="photo" style="background-image:url(/Duong/assets/img/ao/fb/fb1.jpg);">
+            </div>
+            
+            <div class="slide">
+              <p>
+                Shop nhiệt tình bán hàng,cái áo chỉ có 100k thôi mà mặc rất thoải mái.Shop nhiệt tình gửi cho khách
+              </p>
+            </div>
+          </div>
+      
+          <div class="col">
+            <div class="photo" style="background-image:url(/Duong/assets/img/ao/fb/fb2.jpg);">
+            </div>
+       
+            <div class="slide">
+              <p>
+                Sản phẩm đẹp, vải khá dày, đúng mẫu mã, shop giao hàng nhanh tư vấn nhiệt tình, sẽ ủng hộ thêm nữa
+              </p>
+            </div>
+          </div>
+      
+          <div class="col">
+            <div class="photo" style="background-image:url(/Duong/assets/img/ao/fb/fb3.webp);">
+            </div>
+         
+            <div class="slide">
+              <p>
+                Đẹp,giao nhanh đóng gói cẩn thận,nchung đúng với mẫu
+              </p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col">
+            <div class="photo" style="background-image:url(/Duong/assets/img/ao/fb/fb4.jpg);">
+            </div>
+          
+            <div class="slide">
+              <p>
+                Hài lòng về dich vụ và chất liệu sản phẩm rất tốt+ đồ đẹp rẻ+ đóng gói kỹ cẩn thận+ giao hàng rất nhanh.shop uy tín và đáng tin cậy
+              </p>
+            </div>
+          </div>
+      
+          <div class="col">
+            <div class="photo" style="background-image:url(/Duong/assets/img/ao/fb/fb5.jpg);">
+            </div>
+           
+            <div class="slide">
+              <p>
+                Đã nhận được hàng rồi nha shop. Ship rất nhanh. Sản phẩm rất hài lòng. Đặc biệt sản phẩm vừa in. Nhân viên tư vấn rất cẩn thận. GOOD
+              </p>
+            </div>
+          </div>
+      
+          <div class="col">
+            <div class="photo" style="background-image:url(/Duong/assets/img/ao/fb/fb6.jpg);">
+            </div>
+            
+            <div class="slide">
+              <p>
+                shop làm ăn rất uy tín. giao đúng sản phẩm. với giá này thì ko đòi hỏi thêm. mọi người nên mua ở shop sẽ ko cảm thấy thất vọng đâu. cảm ơn shop
+              </p>
+            </div>
+          </div>
+      
+          <div class="col">
+            <div class="photo" style="background-image:url(/Duong/assets/img/ao/fb/fb7.webp);">
+            </div>
+           
+            <div class="slide">
+              <p>
+                Cũng đẹp, giao cũng nhanh, và giá hạt dẻ nên chất lượng vậy là oke r ạ
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 <!-- footer -->
         <div class="footer">
             <div class="company-info">
@@ -211,7 +359,7 @@
               
             </div>
             <div class="contact-info">
-              <h2>Thông tin liên hệ</h2>
+                <p class="i4">Thông tin liên hệ</p>
               <p>Địa chỉ: 888, Hoàng Quốc Việt, Cầu Giấy, Hà Nội</p>
               <p>Điện thoại: 098-888-8888</p>
               <p>Email: <a href="mailto:billduongg@gmail.com">8shop@gmail.com.vn</a></p>
@@ -246,6 +394,8 @@
     const modalClose=document.querySelector('.js-modal-close')
 
     const dytt=document.querySelector('.js-dytt')
+    
+    const cart1=document.querySelectorAll('.js-cart')
 
     function showBuyNow()
     {
@@ -270,6 +420,11 @@
     }
 
     dytt.addEventListener('click', doneDYTT)
+
+    function doneCart(){
+        alert("Tính năng giỏ hàng đang được phát triển, xin lỗi vì bất tiện")
+    }
+    cart1.forEach(cart => cart.addEventListener('click', doneCart));
 
     
 </script>
