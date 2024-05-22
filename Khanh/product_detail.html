@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EIGHT SHOP</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="/Hoang/icon/themify-icons-font/themify-icons/themify-icons.css">
+    </head>
+<body>
+    <!-- wrapper dc hieu la phan bao boc -->
+    <div id="main">
+        <div id="header">
+            <ul id="nav">
+                <!-- đây là các mục của thanh điều hướng -->
+                <li><a href="/Duong/index_trangchu.html">TRANG CHỦ</a></li>
+                <li><a href="#">GIỚI THIỆU</a></li>
+                <li>
+                    <a href="#">ÁO NAM<i class="ti-angle-down"></i></a>
+                    <ul class="sub_more">
+                        <li><a href="/Duong/ao_thun/ao_thun.html">ÁO PHÔNG</a></li>
+                        <li><a href="/Duong/ao_khoac/ao_khoac.html">ÁO KHOÁC</a></li>
+                        <li><a href="/Duong/ao_polo/ao_polo.html">ÁO POLO</a></li>
+                    </ul>
+                </li>
+                <li><a href="/Duc/index.html">QUẦN NAM</a></li>
+                <li><a href="/Hoang/index.html">ĐỒ THỂ THAO</a></li>
+                <li><a href="/Khanh/index.html">GIÀY DÉP</a></li>
+                <li><a href="#">PHỤ KIỆN</a></li>
+                <li><a href="#">HỆ THỐNG CỬA HÀNG</a></li>
+                <li><a href="#">TIN TỨC</a></li>
+            </ul>
+            <div id="mobilemenu" class="mobi-menu">
+                <i class="ti-menu"></i>
+            </div>
+            <div class="user">
+                <a href="/Duong/login/index_login.html">
+                    <i class="ti-user"></i>
+                </a>
+            </div>
+            <div class="cart">
+                <a href="">
+                    <i class="ti-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Chi tiết sản phẩm -->
+        <div class="product-detail" id="1" style="display: none;">
+                <a><img src="shoes1.jpg" alt="Giày 1"></a>
+                <h3>Giày thể thao nữ</h3>
+                <p>1,200,000 VND</p>
+                <button class="buy-now-btn" 
+                        data-product="Giày thể thao nữ" 
+                        data-price="1,200,000 VND" 
+                        data-images='["shoes1.jpg", "shoes1-1.jpg", "shoes1-2.jpg"]'>Mua ngay</button>
+        </div>
+
+        <div class="product-detail" id="2" style="display: none;">
+                <a><img src="shoes2.jpg" alt="Giày 2"></a>
+                <h3>Giày thể thao nam</h3>
+                <p>1,500,000 VND</p>
+                <button class="buy-now-btn" 
+                        data-product="Giày thể thao nam" 
+                        data-price="1,500,000 VND" 
+                        data-images='["shoes2.jpg", "shoes2-1.jpg", "shoes2-2.jpg"]'>Mua ngay</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="buyNowModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2>Mua Sản Phẩm</h2>
+            </div>
+            <div class="modal-body">
+                <div class="carousel">
+                    <img id="carousel-img" src="" alt="Product Image">
+                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                </div>
+                <p id="product-name"></p>
+                <p id="product-price"></p>
+                <form>
+                    <div class="form-group">
+                        <label for="customer-name">Tên khách hàng:</label>
+                        <input type="text" id="customer-name" name="customer-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-phone">Số điện thoại:</label>
+                        <input type="text" id="customer-phone" name="customer-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-address">Địa chỉ:</label>
+                        <input type="text" id="customer-address" name="customer-address" required>
+                    </div>
+                    <div class="size-select">
+                        <label for="product-size">Chọn size:</label>
+                        <select id="product-size" name="product-size">
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                        </select>
+                    </div>
+                    <div class="quantity-select">
+                        <label for="product-quantity">Số lượng:</label>
+                        <input type="number" id="product-quantity" name="product-quantity" min="1" value="1">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="confirm-purchase">Xác nhận mua</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Get modal element
+        var modal = document.getElementById("buyNowModal");
+        // Get close button
+        var closeBtn = document.getElementsByClassName("close")[0];
+        // Get all buy now buttons
+        var buyNowBtns = document.querySelectorAll(".buy-now-btn");
+        // Get carousel elements
+        var carouselImg = document.getElementById("carousel-img");
+        var currentSlideIndex = 0;
+        var slides = [];
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentSlideIndex = 0;
+            } else if (index < 0) {
+                currentSlideIndex = slides.length - 1;
+            } else {
+                currentSlideIndex = index;
+            }
+            carouselImg.src = slides[currentSlideIndex];
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlideIndex + direction);
+        }
+
+        // Add event listener to all buy now buttons
+        buyNowBtns.forEach(function(btn) {
+            btn.addEventListener("click", function() {
+                var productName = btn.getAttribute("data-product");
+                var productPrice = btn.getAttribute("data-price");
+                slides = JSON.parse(btn.getAttribute("data-images"));
+
+                document.getElementById("product-name").innerText = "Sản phẩm: " + productName;
+                document.getElementById("product-price").innerText = "Giá: " + productPrice;
+                
+                showSlide(0);
+                modal.style.display = "block";
+            });
+        });
+
+        // Close modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Add event listener to confirm purchase button
+        document.getElementById("confirm-purchase").addEventListener("click", function() {
+            // You can add form validation and submission logic here
+            alert("Cảm ơn bạn đã mua hàng!");
+            modal.style.display = "none";
+        });
+        // Lấy tham số ID từ URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        // Hiển thị chỉ nội dung của sản phẩm được yêu cầu
+        const productDetails = document.querySelectorAll('.product-detail');
+        productDetails.forEach(detail => {
+            if (detail.id === productId) {
+                detail.style.display = 'block';
+            }
+        });
+    </script>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="company-info">
+            <h1>Thời trang nam EIGHT SHOP</h1>
+            <p>Hệ thống thời trang cho phái mạnh hàng đầu Việt Nam, hướng tới phong cách nam tính, lịch lãm và trẻ trung phù hợp cho mọi khách hàng</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/LouisVuitton"><i class="ti-facebook"></i></a>
+                <a href="https
