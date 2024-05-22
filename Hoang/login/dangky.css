@@ -352,15 +352,15 @@
     margin: 5px 0;
     height: 45px;
     vertical-align: middle;
-    font-size: 16px;
+    font-size: 13px;
   }
   
   input {
-    border: 1px solid #dddfe2;
-    color: #333;
-    padding: 0 8px;
-    outline: none;
-    border-radius: 6px;
+    border-radius: 20px;
+    border: 1px solid #c0c0c0;
+    outline: 0 !important;
+    box-sizing: border-box;
+    padding: 12px 15px;
   }
   
   input:focus {
@@ -369,13 +369,21 @@
   }
   
   .btn-login {
-    background-color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 100px;
-    font-size: 20px;
-    padding: 0 16px;
-    color: #fff;
-    font-weight: 700;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    gap: 5px;
+    color: #ffffff;
+    background-color: #000;
    
   }
   

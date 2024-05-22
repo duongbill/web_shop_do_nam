@@ -104,14 +104,16 @@
     margin-left: 10px;
   }
   
-  .cart {
-    color: white;
-    position: fixed;
-    top: 13px;
-    right: 30px;
-    font-size: 20px;
-    z-index: 58;
-  }
+
+    .cart {
+      color: rgb(199, 5, 5);
+      position: fixed;
+      top: 8px;
+      right: 80px;
+      font-size: 28px;
+      z-index: 58;
+    }
+
   
   body {
     background-color: #f2f8ff;
@@ -414,7 +416,9 @@
   .ti-shopping-cart:before {
     content: "\e60d";
     margin-right: 10px;
+    color: #fffafa;
   }
+  
   
   .modal-body-buy .size-options {
     display: flex;
@@ -454,6 +458,15 @@
   .ti-user:before {
     content: "\e602";
     margin-right: 10px;
+    color: #fff8f8;
+  }
+  .user {
+    color: #ffffff;
+    position: fixed;
+    top: 8px;
+    right: 20px;
+    font-size: 28px;
+    z-index: 90;
   }
   
   .modal-input-sl {

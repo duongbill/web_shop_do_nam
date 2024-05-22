@@ -165,6 +165,7 @@ tu tong quan den chi tieticd
   cursor: pointer;
   font-size: 12px;
   font-weight: 600;
+  
 }
 a{
   color:#000000;
@@ -172,6 +173,7 @@ a{
 }
 .page-link-label:hover {
   color: #000;
+  
 }
 
 .form-btn {
@@ -185,6 +187,7 @@ a{
   color: white;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-decoration: none;
 }
 
 .form-btn:active {
