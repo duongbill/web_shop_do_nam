@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EIGHT SHOP</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/Hoang/icon/themify-icons-font/themify-icons/themify-icons.css">
+    <script>
+        function loadComponent(url, elementId) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadComponent('/menu.html', 'header');
+            loadComponent('/footer.html', 'footer');
+        });
+    </script>
+</head>
+<body>
+    <!-- wrapper dc hieu la phan bao boc -->
+    <div id="main">
+        <div id="header"></div>
+        <div id="content">
+            <!-- Nội dung trang chính ở đây -->
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
