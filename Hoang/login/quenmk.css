@@ -111,6 +111,10 @@ tu tong quan den chi tieticd
   right: 9px;
 
 }
+.content{
+  width: 100%;
+  margin-top: 700px;
+ }
 
 #slider .anh
 {
@@ -136,7 +140,7 @@ tu tong quan den chi tieticd
   justify-content: space-between;
   flex-wrap: wrap;
   color:white;  
-  margin-top: 150px;
+ 
   }
   .company-info p{
     margin-top:10px;

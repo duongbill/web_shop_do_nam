@@ -22,65 +22,13 @@
         }
         
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="header" class="header"></div>
      <!-- wrapper dc hieu la phan bao boc -->
      <div id="main">
-        <div id="header">
-            <ul id="nav">
-                <!-- dau # la kco link  -->
-                <li>
-                    <a href="/Duong/index_trangchu.html">TRANG CHỦ</a>
-                </li>
-                <li>
-                    <a href="#">GIỚI THIỆU</a>
-                </li>
-                <li>
-                    <a href="#">ÁO NAM<i class="ti-angle-down"></i>
-                    </a>
-                    <ul class="sub_more">
-                        <li><a href="/Duong/ao_thun/ao_thun.html">ÁO PHÔNG</li>
-                        <li><a href="/Duong/ao_khoac/ao_khoac.html">ÁO KHOÁC</a></li>
-                        <li><a href="/Duong/ao_polo/ao_polo.html" >ÁO POLO </a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="/Duc/index.html">QUẦN NAM</a>
-                </li>
-                <li>
-                    <a href="#">GIÀY DÉP</a>
-                </li>
-                <li>
-                    <a href="#">TRANG SỨC</a>
-                </li>
-                <li><a href="#">PHỤ KIỆN<i class="ti-angle-down"></i></a>
-                    <ul class="sub_more">
-                        <li><a href="/Hoang/dodabong/dungcubongda.html">BÓNG ĐÁ</a></li>
-                        <li><a href="/Hoang/dodabong/dungcudabong3.html">TÚI XÁCH</a></li>
-                        <li><a href="/Hoang/dodabong/dungcubongda2.html">GĂNG TAY</a></li>
-                    </ul>
-                <li>
-                <li>
-                    <a href="/Duong/hethong_shop/index.html">HỆ THỐNG CỬA HÀNG</a>
-                </li>
-                <li>
-                    <a href="#">TIN TỨC</a>
-                </li>
-            
-            </ul>    
-            
-            <div class="user">
-                <a href="/Hoang/login/index_login.html">
-                    <i class="ti-user"></i>
-                </a>
-            </div>
-            <div class="cart">
-                <a href="">
-                    <i class="ti-shopping-cart"></i>
-                </a>
-            </div>
-            </div>  
+          
+          </div>  
         <div id="slider">
             <div class="anh">
                 <img src="anh111.webp" alt="" width="100%" height="500px">
@@ -93,7 +41,7 @@
                     <h2>Danh mục</h2>
                     <ul class="sidebar-menu">
                         <li>
-                                <h3>Dụng cụ thể thao</h3>
+                                <h3>Phụ kiện thể thao</h3>
                             </a>
                             <ul class="menu-con">
                                 <li><a href="dungcubongda.html">Bóng đá</a></li>
@@ -214,79 +162,91 @@
                    
 
 <!-- the div cua main  -->
-    </div> 
-    <!-- footer -->
-    <div id="footer" class="footer"></div>
-    <!-- menu -->
-    <script>
-        var header = document.getElementById('header');
-        var mobiMenu = document.getElementById('mobilemenu');
-        console.log(mobiMenu);
+</div> 
+<div id="footer" class="footer"></div>
+<!-- menu -->
+<script>
+    var header = document.getElementById('header');
+    var mobiMenu = document.getElementById('mobilemenu');
+    console.log(mobiMenu);
 
-        mobiMenu.onclick = function() {
-            var isClose = header.clientHeight === 46;
-            if (isClose) {
-                header.style.height = 'auto';
-            } else {
-                header.style.height = '46px';
-            }
-        };
-    </script>
+    mobiMenu.onclick = function() {
+        var isClose = header.clientHeight === 46;
+        if (isClose) {
+            header.style.height = 'auto';
+        } else {
+            header.style.height = '46px';
+        }
+    };
+</script>
 
 <!-- modal -->
 <script>
-    const buyBtns = document.querySelectorAll('.js-buy-now')
+const buyBtns = document.querySelectorAll('.js-buy-now')
 
-    const modal=document.querySelector('.js-modal')
+const modal=document.querySelector('.js-modal')
 
-    const modalClose=document.querySelector('.js-modal-close')
+const modalClose=document.querySelector('.js-modal-close')
 
-    const dytt=document.querySelector('.js-dytt')
+const dytt=document.querySelector('.js-dytt')
 
-    function showBuyNow()
-    {
-        modal.classList.add('open')
-    }
+function showBuyNow()
+{
+    modal.classList.add('open')
+}
 
-    function hiddenBuyNow()
-    {
-        modal.classList.remove('open')
-    }
+function hiddenBuyNow()
+{
+    modal.classList.remove('open')
+}
 
-    for (const buyBtn of buyBtns) {
-        buyBtn.addEventListener('click', showBuyNow)
-    }
+for (const buyBtn of buyBtns) {
+    buyBtn.addEventListener('click', showBuyNow)
+}
 
-    modalClose.addEventListener('click', hiddenBuyNow )
+modalClose.addEventListener('click', hiddenBuyNow )
 
-    function doneDYTT()
-    {
-        alert("Mua hàng thành công")
-        modal.classList.remove('open')
-    }
+function doneDYTT()
+{
+    alert("Mua hàng thành công")
+    modal.classList.remove('open')
+}
 
-    dytt.addEventListener('click', doneDYTT)
+dytt.addEventListener('click', doneDYTT)
 
-    </script>
+</script>
 
 
 <!-- coming soon -->
 <script>
-    const comings=document.querySelectorAll('.js-pick')
+const comings=document.querySelectorAll('.js-pick')
 
-    function ComingSoon()
-    {
-        alert("Tính năng đang được phát triển, xin lỗi vì sự bất tiện này")
-    }
-    for (const coming of comings) {  
-        coming.addEventListener('click', ComingSoon)
-    }
-
-  
+function ComingSoon()
+{
+    alert("Tính năng đang được phát triển, xin lỗi vì sự bất tiện này")
+}
+for (const coming of comings) {  
+    coming.addEventListener('click', ComingSoon)
+}
 
 
 </script>
 
+<script>
+// Function to load HTML content into a div
+function loadHTMLContent(url, elementId) {
+    fetch(url)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Error loading HTML content:', error));
+}
+
+// Load header and footer
+loadHTMLContent('/Duong/header.html', 'header');
+loadHTMLContent('/Duong/footer.html', 'footer');
+</script>
 
 </body>
 </html>

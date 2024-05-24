@@ -6,64 +6,28 @@
     <title>Bóng Đá</title>
     <link rel="stylesheet" href="thanhtoan1.css">
     <link rel="stylesheet" href="/Hoang/icon/themify-icons-font/themify-icons/themify-icons.css">
+    <style>
+      .header {
+          height: 46px;
+          width: 100%;
+          background-color: #000;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 9999;
+          color:white;
+      }
+      
+  </style>
 </head>
 <body>
-
-  <div id="main">
-    <div id="header">
-        <ul id="nav">
-            <!-- dau # la kco link  -->
-            <li>
-                <a href="/Duong/index_trangchu.html">TRANG CHỦ</a>
-            </li>
-            <li>
-                <a href="#">GIỚI THIỆU</a>
-            </li>
-            <li>
-                <a href="#">ÁO NAM<i class="ti-angle-down"></i>
-                </a>
-                <ul class="sub_more">
-                    <li><a href="/Duong/ao_thun/ao_thun.html">ÁO PHÔNG</li>
-                    <li><a href="/Duong/ao_khoac/ao_khoac.html">ÁO KHOÁC</a></li>
-                    <li><a href="/Duong/ao_polo/ao_polo.html" >ÁO POLO </a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="/Duc/index.html">QUẦN NAM</a>
-            </li>
-            <li><a href="#">ĐỒ THỂ THAO<i class="ti-angle-down"></i></a>
-                <ul class="sub_more">
-                    <li><a href="/Hoang/dodabong/dungcubongda.html">BÓNG ĐÁ</a></li>
-                    <li><a href="/Hoang/dodabong/dungcudabong3.html">TÚI XÁCH</a></li>
-                    <li><a href="/Hoang/dodabong/dungcubongda2.html">GĂNG TAY</a></li>
-                </ul>
-            <li>
-                <a href="#">GIÀY DÉP</a>
-            </li>
-            <li>
-                <a href="#">PHỤ KIỆN</a>
-            </li>
-            <li>
-                <a href="/Duong/hethong_shop/index.html">HỆ THỐNG CỬA HÀNG</a>
-            </li>
-            <li>
-                <a href="#">TIN TỨC</a>
-            </li>
+  <div id="header" class="header"></div>
+   <!-- wrapper dc hieu la phan bao boc -->
+   <div id="main">
         
-        </ul>    
-        <div class="user">
-            <a href="/Hoang/login/index_login.html">
-                <i class="ti-user"></i>
-            </a>
-        </div>
-        <div class="cart">
-            <a href="">
-                <i class="ti-shopping-cart"></i>
-            </a>
-        </div>
-        </div> 
-
-
+        </div>  
 
 
    <div class="content">
@@ -208,46 +172,23 @@ Bóng phù hợp sử dụng cho trẻ em và người lớn tùy theo kích c�
 
 
     <!-- footer -->
-    <div class="footer">
-      <div class="company-info">
-          <h1>Thời trang nam EIGHT SHOP</h1>
-          <p>Hệ thống thời trang cho phái mạnh hàng đầu Việt Nam, hướng tới phong cách nam tính, lịch lãm và trẻ trung phù hợp cho mọi khách hàng</p>
-          <div class="social-links">
-              <a href="https://www.facebook.com/LouisVuitton"><i class="ti-facebook"></i></a>
-              <a href="https://twitter.com/LouisVuitton?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="ti-twitter"></i></a>
-              <a href="https://www.instagram.com/louisvuitton/"><i class="ti-instagram"></i></a>
-          </div>
-      </div>
-      <div class="contact-info">
-          <h2>Thông tin liên hệ</h2>
-          <p>Địa chỉ: 888, Hoàng Quốc Việt, Cầu Giấy, Hà Nội</p>
-          <p>Điện thoại: 098-888-8888</p>
-          <p>Email: <a href="mailto:haiduong04lc@gmail.com">8shop@gmail.com.vn</a></p>
-      </div>
-      <div class="copyright">
-          <p>@2024 EIGHT SHOP by NguyenHuyHoang</p>
-      </div>
-  </div>
+  </div> 
+  <div id="footer" class="footer"></div>
+  <!-- menu -->
+  <script>
+      var header = document.getElementById('header');
+      var mobiMenu = document.getElementById('mobilemenu');
+      console.log(mobiMenu);
 
-
-    <script>
-      const $thumbnails = document.querySelectorAll('.thumbnail');
-      const $preview = document.getElementById('preview');
-      
-      $thumbnails.forEach(($item) => {
-        $item.addEventListener(
-          'click',
-          (event) => {
-            $thumbnails.forEach((i) => {
-              i.classList.remove('active');
-            });
-            $item.classList.add('active');
-            $preview.src = $item.src;
-          },
-        );
-      });
+      mobiMenu.onclick = function() {
+          var isClose = header.clientHeight === 46;
+          if (isClose) {
+              header.style.height = 'auto';
+          } else {
+              header.style.height = '46px';
+          }
+      };
   </script>
-
 
 <!-- modal -->
 <script>
@@ -283,9 +224,39 @@ Bóng phù hợp sử dụng cho trẻ em và người lớn tùy theo kích c�
 
   dytt.addEventListener('click', doneDYTT)
 
-  
+  </script>
+
+
+<!-- coming soon -->
+<script>
+  const comings=document.querySelectorAll('.js-pick')
+
+  function ComingSoon()
+  {
+      alert("Tính năng đang được phát triển, xin lỗi vì sự bất tiện này")
+  }
+  for (const coming of comings) {  
+      coming.addEventListener('click', ComingSoon)
+  }
+
+
 </script>
 
+<script>
+  // Function to load HTML content into a div
+  function loadHTMLContent(url, elementId) {
+      fetch(url)
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById(elementId).innerHTML = data;
+          })
+          .catch(error => console.error('Error loading HTML content:', error));
+  }
+
+  // Load header and footer
+  loadHTMLContent('/Duong/header.html', 'header');
+  loadHTMLContent('/Duong/footer.html', 'footer');
+</script>
 
 </body>
 </html>
