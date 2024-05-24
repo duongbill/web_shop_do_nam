@@ -146,6 +146,21 @@
                       }
                   };
               </script>
+              <script>
+                // Function to load HTML content into a div
+                function loadHTMLContent(url, elementId) {
+                    fetch(url)
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById(elementId).innerHTML = data;
+                        })
+                        .catch(error => console.error('Error loading HTML content:', error));
+                }
+              
+                // Load header and footer
+                loadHTMLContent('/Duong/header.html', 'header');
+                loadHTMLContent('/Duong/footer.html', 'footer');
+              </script>
 </body>
     </html>
     
