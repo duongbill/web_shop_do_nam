@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áo Nike Polo</title>
+    <link rel="stylesheet" href="/Duong/ao_thun/assets/style_stussy.css">
+    <link rel="stylesheet" href="/Duong/ao_thun/assets/respon_thun.css">
+    <link rel="stylesheet" href="./assets/icon/themify-icons-font/themify-icons/themify-icons.css">
+    <style>
+        .header {
+            height: 46px;
+            width: 100%;
+            background-color: #000;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            color:white;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <div id="header" class="header"></div>
+    <div id="main">
+        <div id="slider">
+            <div class="anh">
+                <img src="/Duong/ao_khoac/banner/nike.png" alt="" width="100%" height="500px">
+            </div>
+        </div>
+<!-- content -->
+        <div class="content">
+            <div class="container">
+                <div class="left">
+                    <h2>Danh mục</h2>
+                    <ul class="sidebar-menu">
+                        <li>
+                                <h3>Hàng hiệu</h3>
+                            </a>
+                            <ul class="menu-con">
+                                <li><a href="/Duong/ao_polo/adidas.html">Adidas</a></li>
+                                <li><a href="/Duong/ao_khoac/gucci.html">Gucci</a></li>
+                                <li><a href="/Duong/ao_khoac/nike.html">Nike</a></li>
+                                <li><a href="/Duong/ao_khoac/lv.html">Louis Vuitton</a></li>
+                            </ul>
+                              
+                            
+                        </li>
+                </div>
+                <div class="right">
+                    <div class="container">
+                        <img src="/Duong/ao_thun/banner/comingsoon.png" alt="Background Image" class="background-image">
+                        <button class="overlay-button js-buy-now">NHẬN THÔNG BÁO</button>
+                    </div>
+                </div>
+                
+
+                <div id="muangay js-modal">
+                    <div class="modal js-modal">
+                        <div class="modal-container js-modal-container">
+                        <div class="button-close js-modal-close">
+                            <i class="ti-close"></i>
+                        </div>  
+                         <div class="modal-header">
+                            <i class="ti-bell">Phiếu nhận thông báo</i>
+                        </div>
+                
+                        <div class="modal-body">
+                               <div class="delivery-form">   
+                                          
+                                <div class="name-fields">
+                                  <div>
+                                    <label for="first-name">Tên</label>
+                                    <input type="text" id="first-name" placeholder="VD: Dương">
+                                  </div>
+                                  <div>
+                                    <label for="last-name">Họ</label>
+                                    <input type="text" id="last-name" placeholder="VD: Nguyễn Hải">
+                                  </div>
+                                </div>
+                              
+                                
+                                <div class="address-type">
+                                  <label>Email</label>
+                                  <input type="email" placeholder="VD: 8shop@gmail.com">
+                                </div>
+                                <div class="phone-number">
+                                  <label for="phone">Số điện thoại</label>
+                                  <input type="tel" id="phone" placeholder="VD: 098 508 2004">
+                                </div>
+                                <label for="pttt">Phương thức nhận thông báo và ưu đãi</label>
+                                <select id="pttt">
+                                  <option value="pt1" selected>SMS</option>
+                                  <option value="pt2" selected>Email</option>
+                                </select>
+                              
+                                <button class="dytt js-dytt" type="submit">Hoàn tất thông tin</button>
+                              </div>  
+                            
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+
+
+
+<!-- the div cua main  -->
+    </div> 
+    <div id="footer" class="footer"></div>
+    <!-- menu -->
+    <script>
+        var header = document.getElementById('header');
+        var mobiMenu = document.getElementById('mobilemenu');
+        console.log(mobiMenu);
+
+        mobiMenu.onclick = function() {
+            var isClose = header.clientHeight === 46;
+            if (isClose) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = '46px';
+            }
+        };
+    </script>
+
+<!-- modal -->
+<script>
+    const buyBtn = document.querySelector('.js-buy-now')
+
+    const modal1=document.querySelector('.js-modal')
+
+    const modalClose1=document.querySelector('.js-modal-close')
+
+    const dytt1=document.querySelector('.js-dytt')
+
+    function showBuyNow()
+    {
+        modal1.classList.add('open')
+    }
+
+    function hiddenBuyNow()
+    {
+        modal1.classList.remove('open')
+    }
+
+    for (const buyBtn of buyBtns) {
+        buyBtn.addEventListener('click', showBuyNow)
+    }
+
+    modalClose1.addEventListener('click', hiddenBuyNow )
+
+    function doneDYTT()
+    {
+        alert("Mua hàng thành công")
+        modal1.classList.remove('open')
+    }
+
+    dytt1.addEventListener('click', doneDYTT)
+
+    </script>
+
+
+<!-- coming soon -->
+<script>
+    const comings=document.querySelectorAll('.js-pick')
+
+    function ComingSoon()
+    {
+        alert("Tính năng đang được phát triển, xin lỗi vì sự bất tiện này")
+    }
+    for (const coming of comings) {  
+        coming.addEventListener('click', ComingSoon)
+    }
+
+
+</script>
+
+<script>
+    // Function to load HTML content into a div
+    function loadHTMLContent(url, elementId) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(elementId).innerHTML = data;
+            })
+            .catch(error => console.error('Error loading HTML content:', error));
+    }
+  
+    // Load header and footer
+    loadHTMLContent('/Duong/header.html', 'header');
+    loadHTMLContent('/Duong/footer.html', 'footer');
+  </script>
+
+<!-- modal -->
+<script>
+    const buyBtns = document.querySelectorAll('.js-buy-now')
+
+    const modal=document.querySelector('.js-modal')
+
+    const modalClose=document.querySelector('.js-modal-close')
+
+    const dytt=document.querySelector('.js-dytt')
+    
+    const cart1=document.querySelectorAll('.js-cart')
+
+    function showBuyNow()
+    {
+        modal.classList.add('open')
+    }
+
+    function hiddenBuyNow()
+    {
+        modal.classList.remove('open')
+    }
+
+    for (const buyBtn of buyBtns) {
+        buyBtn.addEventListener('click', showBuyNow)
+    }
+
+    modalClose.addEventListener('click', hiddenBuyNow )
+
+    function doneDYTT()
+    {
+        alert("Đăng ký nhận thông báo thành công")
+        modal.classList.remove('open')
+    }
+
+    dytt.addEventListener('click', doneDYTT)
+
+    function doneCart(){
+        alert("Tính năng giỏ hàng đang được phát triển, xin lỗi vì bất tiện")
+    }
+    cart1.forEach(cart => cart.addEventListener('click', doneCart));
+
+    
+</script>
+
+
+
+
+
+</body>
+</html>

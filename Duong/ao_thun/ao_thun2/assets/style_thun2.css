@@ -106,6 +106,32 @@ content: "\e64b";
 margin-left: 10px;
 }
 
+.user {
+
+position: fixed;
+top: 8px;
+right: 20px;
+font-size: 28px;
+z-index: 90;
+}
+.cart {
+color: white;
+position: fixed;
+top: 8px;
+right: 80px;
+font-size: 28px;
+z-index: 58;
+}
+i.ti-user {
+color: white;
+}
+a{
+text-decoration: none;
+}
+i.ti-shopping-cart{
+color:white;
+}
+
 #slider .anh
 {
   height: 500px;
@@ -116,7 +142,7 @@ margin-left: 10px;
 }
 /* content */
 .content{
-height: 600px ;
+height: 580px ;
 }
 .container {
 overflow: auto; /* Giải quyết vấn đề float */
@@ -125,7 +151,7 @@ overflow: auto; /* Giải quyết vấn đề float */
 .left {
 float: left;
 width: 15%;
-height: 600px; /* Chiều cao đầy đủ của viewport */
+height: 580px; /* Chiều cao đầy đủ của viewport */
 background-color: rgb(255, 215, 163); /* Màu nền cho phần 30% */
 }
 .left h2{
@@ -155,25 +181,51 @@ padding-top:10px ;
 }
 
 
-
-
-
-
-
-
 .right {
 float: right;
 width: 85%;
-height: 600px; /* Chiều cao đầy đủ của viewport */
+height: 580px; /* Chiều cao đầy đủ của viewport */
 background-color: white; /* Màu nền cho phần 70% */
 }
-.right h1{
-padding:20px;
-color:red;
-display: flex;
-justify-content: center;
-align-items: center;
 
+.right h1 {
+  padding: 20px;
+  color: red;
+  margin-left: 10px;
+}
+
+.input-container {
+  width: 220px;
+  position: relative;
+}
+
+.input {
+  max-width: 190px;
+  background-color: #f5f5f5;
+  color: #242424;
+  padding: 10px;
+  min-height: 40px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid black;
+  line-height: 1.15;
+  box-shadow: 0px 10px 20px -18px;
+  float:right;
+  margin-right:20px;
+  margin-top:-57px;
+  
+}
+.link-pro {
+  text-decoration: none;
+  color:white;
+}
+input:focus {
+  border-bottom: 2px solid black;
+  border-radius: 4px 4px 2px 2px;
+}
+
+input:hover {
+  outline: 1px solid lightgrey;
 }
 .product{
 width: 100%;
@@ -205,15 +257,20 @@ font-weight: bold;
 color: red;
 }
 .click-pick,.click-buy{
-  margin-top: 5px;
-  padding: 8px;
-  background-color: #ccc;
-  color:black;
-  border: none;
+margin-top: 5px;
+padding: 8px;
+background-color: #ccc;
+color:black;
+border: none;
+border-radius: 10px;
+}
+.click-pick{
+  margin-right:3px;
 }
 .click-buy{
 background-color:red;
 color:white;
+
 }
 .image-container{
 width: 320px;
@@ -245,18 +302,22 @@ margin-left:50%;
 }
 .button-group .button-active{
 margin:2px;
-padding:5px;
+padding: 5px;
 
 }
 .button-group .button{
 margin:2px;
-padding:5px;
+padding: 5px;
 color:#ccc;
 }
 
 .button-group .button-active a,.button-group .button a{
 text-decoration: none;
-padding:3px;
+list-style-type: none;
+ 
+}
+.button-group .button {
+background-color: #ccc;
 }
 
 /* modal */
@@ -514,6 +575,14 @@ button[type="submit"]:hover {
 background-color: red;
 }
 
+.link-pro {
+text-decoration: none;
+}
+
+
+
+
+
 
 
 
@@ -573,10 +642,3 @@ background-color: red;
   text-align: center;
   margin-top: 20px;
 }
-
-button.button {
-  background-color: #ccc;
-}
-
-
-

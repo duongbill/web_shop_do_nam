@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áo HD10</title>
+    <link rel="stylesheet" href="/Duong/ao_thun/pro_con/ao_thun_1/style_thun_1.css">
+    <link rel="stylesheet" href="./assets/icon/themify-icons-font/themify-icons/themify-icons.css">
+    <style>
+      .header {
+          height: 46px;
+          width: 100%;
+          background-color: #000;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 9999;
+          color:white;
+      }
+      
+  </style>
+</head>
+<body>
+  <div id="header" class="header"></div>
+
+   <div class="content">
+    <div class="wrapper">
+      <img id="preview" src="/Duong/ao_khoac/ao_con/img1/10_1.webp">
+      <div class="thumbnails">
+        <img class="thumbnail active" src="/Duong/ao_khoac/ao_con/img1/10_1.webp">
+        <img class="thumbnail" src="/Duong/ao_khoac/ao_con/img1/10_2.webp">
+        <img class="thumbnail" src="/Duong/ao_khoac/ao_con/img1/10_3.webp">
+        <img class="thumbnail" src="/Duong/ao_khoac/ao_con/img1/size.png">
+        
+      </div>
+  </div>
+  <div class="form">
+    <h1>Áo HD10</h1>
+    <div class="price">
+      <h3>200.000đ</h3> <h3 id="1m">1.000.000đ</h3>
+    </div>
+
+    <div class="modal-body">
+    <div class="box-color">
+      <div class="color-options">
+        <h3>Màu: </h3>
+        <input type="radio" id="color-den" name="color" class="color-option" value="den">
+        <label for="color-den">Đen</label>
+        <input type="radio" id="color-trang" name="color" class="color-option" value="trang">
+        <label for="color-trang">Trắng</label>
+        <input type="radio" id="color-be" name="color" class="color-option" value="be">
+        <label for="color-be">Xám</label>
+        <input type="radio" id="color-nau" name="color" class="color-option" value="nau">
+        <label for="color-nau">Xanh</label>
+      </div>
+    </div>
+
+      <div class="box-size">
+        <div class="size-options">
+          <h3>Cỡ:    </h3>
+          <input type="radio" id="size-s" name="size" class="size-option" value="s">
+          <label for="size-s">S</label>
+        
+          <input type="radio" id="size-m" name="size" class="size-option" value="m">
+          <label for="size-m">M</label>
+        
+          <input type="radio" id="size-l" name="size" class="size-option" value="l">
+          <label for="size-l">L</label>
+        
+          <input type="radio" id="size-xl" name="size" class="size-option" value="xl">
+          <label for="size-xl">XL</label>
+       </div>
+       <div class="box-number">
+        <h3>Số lượng: </h3>
+        <input type="number" class="modal-input-sl" placeholder="">  
+       </div>
+      </div>
+        <div class="add-cart">
+          <button class="add-to-cart">Thêm vào giỏ hàng</button>
+        </div>
+        <div class="add-buy">
+          <button class="click-buy js-buy-now " >Mua ngay</button>
+        </div>
+        
+
+        <div class="word-infor">
+          Product ID: 292929</br>
+          Chất liệu: Nỉ</br>
+          Kiểu dáng áo hoodie phom oversize năng động.</br>
+          Tay dài, phối mũ trùm.</br>
+          Chất vải mềm mịn, giữ ấm và thấm hút tốt.</br>
+          Gam màu hiện đại dễ dàng phối với nhiều trang phục và phụ kiện.</br>
+        </div>
+        </div>
+        </div>
+  </div>
+   </div>
+
+   <div id="muangay js-modal">
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+        <div class="button-close js-modal-close">
+            <i class="ti-close"></i>
+        </div>
+
+         <div class="modal-header">
+            <i class="ti-shopping-cart">Mua ngay</i>
+        </div>
+
+        <div class="modal-body-buy">
+              <div class="delivery-form">   
+                         
+               <div class="name-fields">
+                 <div>
+                   <label for="first-name">Tên</label>
+                   <input type="text" id="first-name" placeholder="VD: Dương">
+                 </div>
+                 <div>
+                   <label for="last-name">Họ</label>
+                   <input type="text" id="last-name" placeholder="VD: Nguyễn Hải">
+                 </div>
+               </div>
+             
+               <label for="address">Địa chỉ chi tiết</label>
+               <input type="text" id="address" placeholder="VD: số nhà 12 ngách 15 ngõ 888 mai dịch cầu giấy">
+             
+               <div class="address-type">
+                 <label>Thành phố</label>
+                 <input type="text" placeholder="VD: hà nội">
+               </div>
+               <div class="phone-number">
+                 <label for="phone">Số điện thoại</label>
+                 <input type="tel" id="phone" placeholder="VD: 098 508 2004">
+               </div>
+               <label for="pttt">Đơn vị vận chuyển mong muốn</label>
+               <select id="pttt">
+                 <option value="pt1" selected>Bưu điện</option>
+                 <option value="pt2" selected>J&T</option>
+                 <option value="pt3" selected>Giao hàng tiết kiệm</option>
+               </select>
+             
+               <button class="dytt js-dytt" type="submit">Hoàn tất mua hàng</button>
+             </div>  
+       </div>
+        </div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+    <!-- footer -->
+    <div id="footer" class="footer"></div>
+
+
+    <script>
+      const $thumbnails = document.querySelectorAll('.thumbnail');
+      const $preview = document.getElementById('preview');
+      
+      $thumbnails.forEach(($item) => {
+        $item.addEventListener(
+          'click',
+          (event) => {
+            $thumbnails.forEach((i) => {
+              i.classList.remove('active');
+            });
+            $item.classList.add('active');
+            $preview.src = $item.src;
+          },
+        );
+      });
+  </script>
+
+
+<!-- modal -->
+<script>
+  const buyBtns = document.querySelectorAll('.js-buy-now')
+
+  const modal=document.querySelector('.js-modal')
+
+  const modalClose=document.querySelector('.js-modal-close')
+
+  const dytt=document.querySelector('.js-dytt')
+
+  function showBuyNow()
+  {
+      modal.classList.add('open')
+  }
+
+  function hiddenBuyNow()
+  {
+      modal.classList.remove('open')
+  }
+
+  for (const buyBtn of buyBtns) {
+      buyBtn.addEventListener('click', showBuyNow)
+  }
+
+  modalClose.addEventListener('click', hiddenBuyNow )
+
+  function doneDYTT()
+  {
+      alert("Mua hàng thành công")
+      modal.classList.remove('open')
+  }
+
+  dytt.addEventListener('click', doneDYTT)
+
+  
+</script>
+
+<script>
+  // Function to load HTML content into a div
+  function loadHTMLContent(url, elementId) {
+      fetch(url)
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById(elementId).innerHTML = data;
+          })
+          .catch(error => console.error('Error loading HTML content:', error));
+  }
+
+  // Load header and footer
+  loadHTMLContent('/Duong/header.html', 'header');
+  loadHTMLContent('/Duong/footer.html', 'footer');
+</script>
+
+
+</body>
+</html>
