@@ -13,14 +13,69 @@
 <body>
     <!-- wrapper dc hieu la phan bao boc -->
     <div id="main">
-      <div id="header" class="header"></div> 
+        <div id="header">
+            <ul id="nav">
+                <!-- dau # la kco link  -->
+                <li>
+                    <a href="/Duong/index_trangchu.html">TRANG CHỦ</a>
+                </li>
+                <li>
+                    <a href="/Khanh/gioithieu.html">GIỚI THIỆU</a>
+                </li>
+                <li>
+                    <a href="#">ÁO NAM<i class="ti-angle-down"></i>
+                    </a>
+                    <ul class="sub_more">
+                        <li><a href="/Duong/ao_thun/ao_thun.html">ÁO PHÔNG</li>
+                        <li><a href="/Duong/ao_khoac/ao_khoac.html">ÁO HOODIES</a></li>
+                        <li><a href="/Duong/ao_polo/ao_polo.html" >ÁO POLO </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/Duc/index.html">QUẦN NAM</a>
+                </li>
+                <li>
+                    <a href="/Khanh/index.html">GIÀY DÉP</a>
+                </li>
+                <li>
+                    <a href="/1/index.html">TRANG SỨC</a>
+                </li>
+                <li><a href="#">PHỤ KIỆN<i class="ti-angle-down"></i></a>
+                    <ul class="sub_more">
+                        <li><a href="/Hoang/dodabong/dungcubongda.html">BÓNG ĐÁ</a></li>
+                        <li><a href="/Hoang/dodabong/dungcudabong3.html">TÚI XÁCH</a></li>
+                        <li><a href="/Hoang/dodabong/dungcubongda2.html">GĂNG TAY</a></li>
+                    </ul>
+                <li>
+                <li>
+                    <a href="/Duong/hethong_shop/index.html">HỆ THỐNG CỬA HÀNG</a>
+                </li>
+                <li>
+                    <a href="/Khanh/tintuc.html">TIN TỨC</a>
+                </li>
+            
+            </ul>    
+            <div id="mobilemenu"  class="mobi-menu">
+                <i class="ti-menu"></i>
+            </div>
+            <div class="user">
+                <a href="/Hoang/login/index_login.html">
+                    <i class="ti-user"></i>
+                </a>
+            </div>
+            <div class="cart">
+                <a href="">
+                    <i class="ti-shopping-cart"></i>
+                </a>
+            </div>
+            </div>  
 
             <div id="slider">
                 <div class="anh">
                     <img src="./assets/img/banner/banner8shop.png" alt="" width="100%" height="500px">
                 </div>
             </div>
-      </div>
+
 
 <div id="content">
 <!-- ao ban chay -->
@@ -299,7 +354,28 @@
 </div>
 
 <!-- footer -->
-<div id="footer" class="footer"></div>
+        <div class="footer">
+            <div class="company-info">
+              <h1>Thời trang nam EIGHT SHOP</h1>
+              <p>Hệ thống thời trang cho phái mạnh hàng đầu Việt Nam, hướng tới phong cách nam tính, lịch lãm và trẻ trung phù hợp cho mọi khách hàng</p>
+              <div class="social-links">
+                <a href="https://www.facebook.com/LouisVuitton"><i class="ti-facebook"></i></a>
+                <a href="https://twitter.com/LouisVuitton?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="ti-twitter"></i></a>
+                <a href="https://www.instagram.com/louisvuitton/"><i class="ti-instagram"></i></a>
+              </div>
+              
+            </div>
+            <div class="contact-info">
+                <p class="i4">Thông tin liên hệ</p>
+              <p>Địa chỉ: 888, Hoàng Quốc Việt, Cầu Giấy, Hà Nội</p>
+              <p>Điện thoại: 098-888-8888</p>
+              <p>Email: <a href="mailto:billduongg@gmail.com">8shop@gmail.com.vn</a></p>
+              
+            </div> 
+            <div class="copyright">
+              <p>@2024 EIGHT SHOP by NguyenHaiDuong </p>
+            </div>
+          </div>
 <!-- menu -->
           <script>
             var header = document.getElementById('header');
@@ -364,18 +440,3 @@
 </body>
     </html>
     <!-- duongbill test -->
-    <script>
-      // Function to load HTML content into a div
-      function loadHTMLContent(url, elementId) {
-          fetch(url)
-              .then(response => response.text())
-              .then(data => {
-                  document.getElementById(elementId).innerHTML = data;
-              })
-              .catch(error => console.error('Error loading HTML content:', error));
-      }
-    
-      // Load header and footer
-      loadHTMLContent('/Duong/header.html', 'header');
-      loadHTMLContent('/Duong/footer.html', 'footer');
-    </script>
