@@ -3,56 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Áo Thun Nam</title>
+    <title>Áo NBA</title>
     <link rel="stylesheet" href="/Duong/ao_thun/pro_con/ao_thun_1/style_thun_1.css">
     <link rel="stylesheet" href="./assets/icon/themify-icons-font/themify-icons/themify-icons.css">
+    <style>
+      .header {
+          height: 46px;
+          width: 100%;
+          background-color: #000;
+          position: fixed;
+          width: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 9999;
+          color:white;
+      }
+      
+  </style>
 </head>
 <body>
-
-  <div id="main">
-    <div id="header">
-        <ul id="nav">
-            <li><a href="/Duong/index_trangchu.html">TRANG CHỦ</a></li>
-            <li>
-                <a href="#">ÁO NAM<i class="ti-angle-down"></i></a>
-                <ul class="sub_more">
-                    <li><a href="/Duong/ao_thun/ao_thun.html">ÁO PHÔNG</a></li>
-                    <li><a href="/Duong/ao_khoac/ao_khoac.html">ÁO KHOÁC</a></li>
-                    <li><a href="/Duong/ao_polo/ao_polo.html">ÁO POLO</a></li>
-                </ul>
-            </li>
-            <li><a href="#">QUẦN NAM</a></li>
-            <li><a href="#">ĐỒ THỂ THAO</a></li>
-            <li><a href="#">GIÀY DÉP</a></li>
-            <li><a href="#">PHỤ KIỆN</a></li>
-            
-        </ul>
-    </div>
-    <div id="mobilemenu" class="mobi-menu">
-        <i class="ti-menu"></i>
-    </div>
-    <div class="cart">
-        <i class="ti-shopping-cart"></i>
-    </div>
-
-
-
+  <div id="header" class="header"></div>
 
    <div class="content">
     <div class="wrapper">
-      <img id="preview" src="/Duong/ao_thun/pro_con/ao_thun_1/img1/1.webp">
+      <img id="preview" src="/Duong/ao_thun/pro_con/ao_thun_1/img1/4_1.webp">
       <div class="thumbnails">
-        <img class="thumbnail active" src="/Duong/ao_thun/pro_con/ao_thun_1/img1/1.webp">
-        <img class="thumbnail" src="/Duong/ao_thun/pro_con/ao_thun_1/img1/4.webp">
-        <img class="thumbnail" src="/Duong/ao_thun/pro_con/ao_thun_1/img1/5.webp">
+        <img class="thumbnail active" src="/Duong/ao_thun/pro_con/ao_thun_1/img1/4_1.webp">
+        <img class="thumbnail" src="/Duong/ao_thun/pro_con/ao_thun_1/img1/4_2.webp">
+        <img class="thumbnail" src="/Duong/ao_thun/pro_con/ao_thun_1/img1/4_3.webp">
         <img class="thumbnail" src="/Duong/ao_thun/pro_con/ao_thun_1/img1/6.webp">
         
       </div>
   </div>
   <div class="form">
-    <h1>Áo mặt trời Drew </h1>
+    <h1>Áo NBA </h1>
     <div class="price">
-      <h3>800.000đ</h3> <h3 id="1m">1.000.000đ</h3>
+      <h3>200.000đ</h3> <h3 id="1m">1.000.000đ</h3>
     </div>
 
     <div class="modal-body">
@@ -165,41 +152,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!-- footer -->
-    <div class="footer">
-      <div class="company-info">
-          <h1>Thời trang nam EIGHT SHOP</h1>
-          <p>Hệ thống thời trang cho phái mạnh hàng đầu Việt Nam, hướng tới phong cách nam tính, lịch lãm và trẻ trung phù hợp cho mọi khách hàng</p>
-          <div class="social-links">
-              <a href="https://www.facebook.com/LouisVuitton"><i class="ti-facebook"></i></a>
-              <a href="https://twitter.com/LouisVuitton?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="ti-twitter"></i></a>
-              <a href="https://www.instagram.com/louisvuitton/"><i class="ti-instagram"></i></a>
-          </div>
-      </div>
-      <div class="contact-info">
-          <h2>Thông tin liên hệ</h2>
-          <p>Địa chỉ: 888, Hoàng Quốc Việt, Cầu Giấy, Hà Nội</p>
-          <p>Điện thoại: 098-888-8888</p>
-          <p>Email: <a href="mailto:haiduong04lc@gmail.com">8shop@gmail.com.vn</a></p>
-      </div>
-      <div class="copyright">
-          <p>@2024 EIGHT SHOP by NguyenHaiDuong</p>
-      </div>
-  </div>
+    <div id="footer" class="footer"></div>
 
 
     <script>
@@ -256,6 +210,22 @@
   dytt.addEventListener('click', doneDYTT)
 
   
+</script>
+
+<script>
+  // Function to load HTML content into a div
+  function loadHTMLContent(url, elementId) {
+      fetch(url)
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById(elementId).innerHTML = data;
+          })
+          .catch(error => console.error('Error loading HTML content:', error));
+  }
+
+  // Load header and footer
+  loadHTMLContent('/Duong/header.html', 'header');
+  loadHTMLContent('/Duong/footer.html', 'footer');
 </script>
 
 

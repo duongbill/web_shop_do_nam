@@ -38,9 +38,9 @@
             <div class="product-list">
                 <div class="product-item">
                     <a href="thanhtoan.html"><img src="shoes1.jpg" alt="Giày 1"></a>
-                    <h3>Giày thể thao nữ</h3>
+                    <h3>Giày mọi nam</h3>
                     <p>1,200,000 VND</p>
-                    <button class="buy-now-btn" data-product="Giày thể thao nữ" data-price="1,200,000 VND" data-images='["shoes1.jpg", "shoes1-1.jpg", "shoes1-2.jpg"]'>Mua ngay</button>
+                    <button class="buy-now-btn" data-product="Giày mọi nam" data-price="1,200,000 VND" data-images='["shoes1.jpg", "shoes1-1.jpg", "shoes1-2.jpg"]'>Mua ngay</button>
                 </div>
                 <div class="product-item">
                     <a href="thanhtoan2.html"><img src="shoes2.jpg" alt="Giày 2"></a>
@@ -56,9 +56,9 @@
                 </div>
                 <div class="product-item">
                     <a href="thanhtoan4.html"><img src="shoes4.jpg" alt="Giày 4"></a>
-                    <h3>Giày cao gót</h3>
+                    <h3>Sandal nam</h3>
                     <p>2,000,000 VND</p>
-                    <button class="buy-now-btn" data-product="Giày cao gót" data-price="2,000,000 VND" data-images='["shoes4.jpg", "shoes4-1.jpg", "shoes4-2.jpg"]'>Mua ngay</button>
+                    <button class="buy-now-btn" data-product="Sandal nam" data-price="2,000,000 VND" data-images='["shoes4.jpg", "shoes4-1.jpg", "shoes4-2.jpg"]'>Mua ngay</button>
                 </div>
                 <div class="product-item">
                     <a href="thanhtoan5.html"><img src="shoes5.jpg" alt="Giày 5"></a>
@@ -66,8 +66,8 @@
                     <p>1,300,000 VND</p>
                     <button class="buy-now-btn" data-product="Dép lê" data-price="1,300,000 VND" data-images='["shoes5.jpg", "shoes5-1.jpg", "shoes5-2.jpg"]'>Mua ngay</button>
                 </div>
-        </div>
-
+            </div>
+    <div id="footer" class="footer"></div>
 <!-- Modal -->
 <div id="buyNowModal" class="modal">
     <div class="modal-content">
@@ -119,9 +119,8 @@
 </div>
 
 
-
-<div id="footer" class="footer"></div>
-
+</body>
+</html>
 <script>
   // Function to load HTML content into a div
   function loadHTMLContent(url, elementId) {
@@ -137,7 +136,7 @@
   loadHTMLContent('/Duong/header.html', 'header');
   loadHTMLContent('/Duong/footer.html', 'footer');
 </script>
-    <script>
+<script>
         // Get modal element
         var modal = document.getElementById("buyNowModal");
         // Get close button
@@ -197,6 +196,4 @@
             alert("Cảm ơn bạn đã mua hàng!");
             modal.style.display = "none";
         });
-    </script>
-</body>
-</html>
+</script>

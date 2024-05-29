@@ -106,7 +106,7 @@ html {
   width: 100%;
   height: 400px;
   background: url('banner-shoes.jpg') no-repeat center center/cover;
-  margin-top: 46px; /* To account for fixed header */
+
   position: relative;
   z-index: 0;
 }
@@ -126,6 +126,24 @@ html {
   padding: 10px 20px;
   margin-top: -30px;
   z-index: 2;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  color: #333;
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.section p {
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .product-list {
@@ -273,6 +291,7 @@ html {
     flex: none;
   }
 }
+
 .modal {
   display: none; 
   position: fixed; 
@@ -388,3 +407,142 @@ html {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+#bannerGT {
+  width: 100%;
+  height: 100%; /* hoặc bạn có thể thay đổi chiều cao tùy ý */
+  overflow: hidden; /* để ẩn phần nào của hình ảnh vượt ra khỏi khung hình */
+}
+
+#bannerGT img {
+  width: 100%;
+  height: auto; /* để tỷ lệ chiều cao được tự động điều chỉnh để phù hợp với chiều rộng */
+  object-fit: cover; /* để hình ảnh tự điều chỉnh sao cho vừa với khung hình */
+}/* Định kiểu cho danh sách sub_more */
+.sub_more {
+  list-style-type: none; /* Loại bỏ ký hiệu đầu dòng */
+  padding: 0;
+  margin: 0;
+  background-color: #fff; /* Nền trắng */
+  border: 1px solid #ddd; /* Đường viền nhạt */
+  border-radius: 4px; /* Bo góc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+}
+
+/* Định kiểu cho các liên kết bên trong sub_more */
+.sub_more li a {
+  display: block;
+  padding: 10px 16px;
+  color: #333; /* Màu chữ tối */
+  text-decoration: none; /* Loại bỏ gạch chân */
+  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu mượt mà */
+  font-size: 16px; /* Cỡ chữ */
+  font-weight: 500; /* Độ dày chữ */
+}
+
+/* Hiệu ứng khi di chuột vào các liên kết */
+.sub_more li a:hover {
+  background-color: #f1f1f1; /* Màu nền khi di chuột vào */
+  color: #e91e63; /* Màu chữ khi di chuột vào */
+  border-radius: 4px; /* Bo góc */
+}
+
+#scroll-images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#scroll-images img {
+  width: calc(100% / 3); /* Chia đều chiều rộng cho 3 ảnh mỗi hàng */
+  height: auto; /* Chiều cao tự động điều chỉnh để giữ tỷ lệ khung hình */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị vỡ */
+}
+/* Đảm bảo tất cả các phần tử được đặt lại padding và margin */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+  padding: 80px;
+}
+
+.section {
+  margin-bottom: 80px;
+}
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Khoảng cách giữa các mục */
+}
+
+.news-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 20px); /* Đảm bảo 3 mục trong 1 hàng */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Giúp hình ảnh vừa với khung */
+}
+
+.news-item h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.news-item p {
+  font-size: 14px;
+  color: #333;
+  margin: 10px;
+}
+
+.news-item a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.news-item a:hover {
+  background-color: #333;
+}
+
+.news-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+#bannernews {
+  width: 100%;
+  height: 400px;
+  margin-top: 46px; /* Để phù hợp với header cố định */
+  position: relative;
+  z-index: 0;
+  overflow: hidden; /* Đảm bảo không bị tràn ra khỏi phần tử cha */
+}
+
+#bannernews img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Lấp đầy khung hình mà không bị cắt bớt */
+}
+
