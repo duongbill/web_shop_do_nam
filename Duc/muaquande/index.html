@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.SHOP-Thế Giới Thời Trang</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-pills mb-3 justify-content-center" id="productCategories">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-target="quan-kaki-dai" href="#">Quần Kaki Dài</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-target="quan-short" href="#">Quần Short</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-target="quan-jean" href="#">Quần Jean</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-target="quan-jogger-thun" href="#">Quần Jogger Thun</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-3" id="products"></div>
+
+    <nav>
+        <button id="prevBtn" disabled>Trước</button>
+        <span id="pageInfo">Trang 1/3</span>
+        <button id="nextBtn">Sau</button>
+    </nav>
+
+    <footer>
+        <div class="footer-container">
+            </div>
+        </div>
+        <div class="footer-bottom">
+          © 2023 8.SHOP. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // Danh sách sản phẩm
+        const products = [
+            {
+                name: "Quần Kaki Dài (KK01)",
+                price: 200.000,
+                image: "https://product.hstatic.net/1000096703/product/1_861eebd4a2d3426baf33191a093d4a86_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ... (thêm các sản phẩm khác vào đây)
+            {
+                name: "Quần Kaki Dài (KK02)",
+                price: 200.000,
+                image: "https://product.hstatic.net/1000096703/product/1_78eb6116dd6f4e558ac0abbdf8a6bfc1_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+            {
+                name: "Quần Kaki Dài (KK03)",
+                price: 100.000,
+                image: "https://product.hstatic.net/1000096703/product/1_bbba757f919e44329597ca383e614dc3_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+            {
+                name: "Quần Kaki Dài (KK04)",
+                price: 250.000,
+                image: "https://product.hstatic.net/1000096703/product/1_e51e69e490a34e97bd16fbd1e7857c5d_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+            {
+                name: "Quần Kaki Dài (KK05)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/31_2aa4b791f2e0439c8124075fa0c88cc2_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+			{
+                name: "Quần Kaki Dài (KK06)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/33_2f7397ab7f46457dba07d24faaa5af42_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+			{
+                name: "Quần Kaki Dài (KK07)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/32_be5325d50ad14a99879ec798fcdff197_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+			{
+                name: "Quần Kaki Dài (KK08)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_37424cd60f824ac586a5dbeffd61a162_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+			{
+                name: "Quần Kaki Dài (KK09)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_a9055cbc03664d7ca0f54051d9036ce8_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+			{
+                name: "Quần Kaki Dài (KK10)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_ba5b7e5fdcf249158d9af8e636942109_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+			{
+                name: "Quần Kaki Dài (KK11)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_0b003253ba274d8b9b0eeda113629d52_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+			{
+                name: "Quần Kaki Dài (KK12)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_dbbde903bbcc4df89c3bbd6275d755b4_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+			{
+                name: "Quần Kaki Dài (KK13)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_d1766e627654481b97837f6751bcd954_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+			{
+                name: "Quần Kaki Dài (KK14)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_59096ff3c33a44c8885802ae4d686d53_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+			{
+                name: "Quần Kaki Dài (KK15)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_51c56ef9ef8845ca9e48a75425526e2d_master.jpg",
+                category: "quan-kaki-dai"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG01)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_ab6c61953dde42b8aacbe9c1b959f986_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG02)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_3375d386f9484028a4e946d5ec23e37f_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG03)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_bf327eccd9924a608ff613b8270dafeb_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG04)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_94b7a5c1d4e746728a54bf9130070960_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG05)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_4e0c0301647c4a1db167636074a8507e_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG06)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_116ecddcecee44e1aa004cc3cb1b3166_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG07)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_ee6bc20e87544fc59a6e8923ac2ff814_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG08)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_bb411c74489b4901a2fde1eb9e5a7fdd_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG09)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/dsc_5384_15048ab8a1d6476582214d9b27181626_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG10)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/dsc_5373_19f417467b504d7f97e0f17f67ee6213_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG11)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_a774cd56d7544d7798478095ebecdf51_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG12)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_934944f73fb948079fa409e105ba28d3_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG13)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_c1fa680f90124b5c8b2bcea44afac7d1_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG14)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_da94eeaba5224fcbbd350babc56062d8_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Jogger Thun (JG15)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_509de8b35a034032be4bf2cc18807991_master.jpg",
+                category: "quan-jogger-thun"
+            },
+            // ...
+			{
+                name: "Quần Short (S01)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_33b2df1ab4b84194846cdf1840f02b9d_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Short (S02)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/short_tay_0779e3fdf0884f1c80a2aea1d1f5554c_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Short (S03)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/18_cb7f329504c14b70a5f7640edecc9747_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Short (S04)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/hang_tq_005c7e470641479e9603298e9266fde1_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Short (S05)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/0_52c4e7d576574cb1aa785282c44e81c9_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Short (S06)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_3822746026294ae3bf7aa0d9e84c0e60_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Short (S07)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_1e8aa85b47204933a9346c2f527b282a_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Short (S08)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_8353f0a9c82e40d5815e4c221a06460a_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Short (S09)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/2_82675ee676e64ff4a7a2697ad7c08bc9_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Short (S10)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/3_2d96ce0816894d2e8ab7ffed5633a517_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Short (S12)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_2ba34186d6654c63872f33d02957ac40_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Short (S13)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_8628158ba0de479f874c1f8ec208eda9_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Short (S14)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_866d63aa323a4b7387c42e3a7c270d8c_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Short (S15)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_aedf042147d0439fa4cabea9ce68fb59_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			{
+                name: "Quần Jean (J01)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_a72c747d917d49ee8fc3de171ed104d6_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J02)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/0_6b6e86c96b12427cb6f9bd6ae78b6eb3_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J03)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_d0ffb5c9b05c48329be0e1bd775632d5_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J04)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_d020d7722a8c4224a93ed743757f44c5_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J05)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_30efeaab53b74c7a8c0996ab7cd87d9b_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J06)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_42e0ef2643c34ff59145115b65f853e1_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J07)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/28_abd1ec085f23444388eb3a609e4644bb_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J08)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_7351c15fc04d41899d388702e4d2566a_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J09)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_7511be698de944a084affbc7c479db0c_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J10)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/4_2540e74557104dac817cebcd5b3fe15f_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J11)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_fff04c6d0e2349489e8cc881a9ae66ee_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J12)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_44be5957fe724995a5efbc301b9b947d_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J13)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_203c7b7f533b473296047f6796287bcd_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J14)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/29_636e67277ca34eecaf0f9115d556780f_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Jean (J15)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_ab77b1c717054a8abf537780d1594433_master.jpg",
+                category: "quan-jean"
+            },
+            // ...
+			{
+                name: "Quần Short (S11)",
+                price: 180.000,
+                image: "https://product.hstatic.net/1000096703/product/1_3c08ed02681b4c32947ef41d8d9c1060_master.jpg",
+                category: "quan-short"
+            },
+            // ...
+			
+        ];
+
+        // Chia sản phẩm thành từng trang
+        const productsPerPage = 5;
+        const numPages = 3; // 3 trang cho mỗi danh mục
+        let currentPage = 1;
+        let currentCategory = "all"; // Lọc tất cả sản phẩm ban đầu
+
+        // Hiển thị sản phẩm trên trang
+        function showProducts() {
+            const productContainer = document.getElementById("products");
+            productContainer.innerHTML = "";
+            const filteredProducts = currentCategory === "all" 
+                                    ? products 
+                                    : products.filter(product => product.category === currentCategory);
+            const startIndex = (currentPage - 1) * productsPerPage;
+            const endIndex = startIndex + productsPerPage;
+            for (let i = startIndex; i < endIndex && i < filteredProducts.length; i++) {
+                const product = filteredProducts[i];
+                const productDiv = document.createElement("div");
+                productDiv.className = "product";
+                productDiv.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <h3>${product.name}</h3>
+                    <p>Giá: ${product.price}.000</p>
+                    <button>Mua Hàng</button>
+                `;
+                productContainer.appendChild(productDiv);
+            }
+            updatePageInfo();
+        }
+
+        // Cập nhật thông tin trang
+        function updatePageInfo() {
+            const filteredProducts = currentCategory === "all" 
+                                    ? products 
+                                    : products.filter(product => product.category === currentCategory);
+            document.getElementById("pageInfo").textContent = `Trang ${currentPage}/${numPages}`; // Hiển thị 3 trang
+            document.getElementById("prevBtn").disabled = currentPage === 1;
+            document.getElementById("nextBtn").disabled = currentPage === numPages;
+        }
+
+        // Xử lý nút Trước và Sau
+        document.getElementById("prevBtn").addEventListener("click", () => {
+            currentPage--;
+            showProducts();
+        });
+        document.getElementById("nextBtn").addEventListener("click", () => {
+            currentPage++;
+            showProducts();
+        });
+
+        // Xử lý click vào danh mục sản phẩm
+        const productCategories = document.getElementById('productCategories');
+        productCategories.addEventListener('click', (event) => {
+            if (event.target.tagName === 'A') {
+                const category = event.target.dataset.target;
+                currentCategory = category;
+                currentPage = 1; // Quay về trang 1 khi đổi danh mục
+                showProducts();
+
+                // Thay đổi class active cho nút danh mục
+                const activeLink = productCategories.querySelector('.nav-link.active');
+                activeLink.classList.remove('active');
+                event.target.classList.add('active');
+            }
+        });
+
+        // Hiển thị sản phẩm ban đầu
+        showProducts();
+    </script>
+    <style>
+		.product {
+    border: 1px solid #dddddd64;
+    padding: 30px; /* Giảm padding */
+    margin: 5px; /* Giảm margin */
+    display: inline-block;
+    width: 300px; /* Giảm width */
+    height: 320px; /* Giảm height */
+    text-align: center;
+    background-color: #ffffff63;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    vertical-align: top; /* Căn chỉnh khung sản phẩm theo đỉnh */
+    position: relative; /* Để định vị nút "Mua Hàng" */
+}
+
+.product img {
+    max-width: 220px; /* Giảm max-width */
+    height: auto;
+    max-height: 250px; /* Giảm max-height */
+}
+
+.product h3 {
+    font-size: 14px; /* Giảm font-size */
+    margin: 5px 0 3px;
+    color: #333;
+}
+
+.product p {
+    font-size: 12px; /* Giảm font-size */
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.product button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 12px; /* Giảm padding */
+    border: none;
+    cursor: pointer;
+    font-size: 12px; /* Giảm font-size */
+    transition: background-color 0.3s ease;
+    position: absolute; /* Định vị nút "Mua Hàng" */
+    bottom: 10px; /* Khoảng cách từ đáy khung sản phẩm */
+    left: 50%;
+    transform: translateX(-50%); /* Căn giữa nút "Mua Hàng" */
+}
+	footer {
+        background-color: #f2f2f2;
+        padding: 40px 0;
+      }
+      
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      
+      .footer-col {
+        width: 18%;
+      }
+      
+      .footer-col h3 {
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .footer-col ul li {
+        margin-bottom: 10px;
+      }
+      
+      .social-links a {
+        display: inline-block;
+        margin-right: 10px;
+        color: #333;
+        font-size: 20px;
+      }
+      
+      .footer-bottom {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 14px;
+        color: #666;
+      }</style>
+  <script></script>
+ 
+   
+      <div class="footer">
+        <div class="company-info">
+          <h1>Thời trang nam EIGHT SHOP</h1>
+          <p>Hệ thống thời trang cho phái mạnh hàng đầu Việt Nam, hướng tới phong cách nam tính, lịch lãm và trẻ trung phù hợp cho mọi khách hàng</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/LouisVuitton"><i class="ti-facebook"></i></a>
+            <a href="https://twitter.com/LouisVuitton?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="ti-twitter"></i></a>
+            <a href="https://www.instagram.com/louisvuitton/"><i class="ti-instagram"></i></a>
+          </div>
+          
+        </div>
+        <div class="contact-info">
+            <p class="i4">Thông tin liên hệ</p>
+          <p>Địa chỉ: 888, Hoàng Quốc Việt, Cầu Giấy, Hà Nội</p>
+          <p>Điện thoại: 098-888-8888</p>
+          <p>Email: <a href="mailto:billduongg@gmail.com">8shop@gmail.com.vn</a></p>
+          
+        </div> 
+        <div class="copyright">
+          <p>@2024 EIGHT SHOP by NguyenHaiDuong </p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
