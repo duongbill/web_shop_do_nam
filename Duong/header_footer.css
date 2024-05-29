@@ -131,6 +131,16 @@
   i.ti-user {
     color: white;
   }
+  .contact{
+    position: fixed;
+    top: 10px;
+    right: 150px;
+    font-size: 28px;
+    z-index: 90;
+  }
+  i.ti-headphone-alt{
+    color:white;
+  }
   a{
     text-decoration: none;
   }
