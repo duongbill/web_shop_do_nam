@@ -152,7 +152,7 @@ i.ti-shopping-cart{
   float: left;
   width: 15%;
   height: 1000px; /* Chiều cao đầy đủ của viewport */
-  background-color: rgb(155, 155, 155); /* Màu nền cho phần 30% */
+  background-color: rgb(255, 215, 163); /* Màu nền cho phần 30% */
 }
 .left h2{
   padding: 10px;
