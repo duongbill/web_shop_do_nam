@@ -1,162 +1,126 @@
-//* reset css */
+/* Reset CSS */
 * {
   padding: 0;
   margin: 0;
-  /* kp tinh toan kich thuoc */
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
-html
-{
-  font-family:Arial, Helvetica, sans-serif;
-}
-/* chu y
-lam từ ngoài vào trong
-từ trên xuống dưới 
-tu tong quan den chi tieticd
 
-1. vi tri 
-2 kichs thuoc
-3 màu sắc
-4 kiểu chữ 
-*/
-
-.clear
-{
-  clear:both;
+html {
+  font-family: Arial, Helvetica, sans-serif;
 }
-#main
-{
 
+/* Các lớp CSS chung */
+.clear {
+  clear: both;
 }
-#header
-{
+
+a {
+  text-decoration: none;
+}
+
+i.ti-user, i.ti-headphone-alt, i.ti-shopping-cart {
+  color: white;
+}
+
+#main {}
+
+/* Header và Navigation */
+#header {
   height: 46px;
   background-color: #000;
   position: fixed;
-  top:0;
-  left:0;
-  right:0;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 999;
-
 }
-#nav, .sub_more
-{
+
+#nav, .sub_more {
   list-style-type: none;
 }
-#nav > li 
-{
+
+#nav > li {
   display: inline-block;
-  /*  navigation */
-} 
-#nav li{
+}
+
+#nav li {
   position: relative;
 }
 
-#nav li a{
-  color:white;
+#nav li a {
+  color: white;
   text-decoration: none;
   line-height: 46px;
   padding: 0 24px;
-  display:block;
+  display: block;
+}
 
-}
-#nav > li:hover>  a{
-  color:#000;
+#nav > li:hover > a, #nav .sub_more > li:hover > a {
+  color: #000;
   background-color: #ccc;
-  background-size: 100%;
-  display:inline-block;
 }
-#nav .sub_more
-{
-width:131.13px;
+
+#nav .sub_more {
+  width: 131.13px;
   display: none;
   position: absolute;
   background-color: #fff;
-  color:#000;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 
+#nav li:hover .sub_more {
+  display: block;
 }
-#nav li:hover  .sub_more
-{
-  display:block;
-}
-#nav .sub_more >li > a{
-  /* nghĩa là đang trỏ vào mấy thằng thẻ a cấp 2*/
+
+#nav .sub_more > li > a {
   color: black;
-  padding:0 12px;
-  font-size: 14 px;
+  padding: 0 12px;
+  font-size: 14px;
 }
-#nav .sub_more >li:hover > a{
-  color:#000;
-  background-color: #ccc;
-  background-size: 100%;
-  display:block;
-  
-}
-#nav{
+
+#nav {
   display: inline-block;
 }
 
-.ti-angle-down{
+.ti-angle-down {
   font-size: 10px;
 }
 
 .ti-angle-down:before {
-content: "\e64b";
-margin-left: 10px;
-}
-.ti-menu{
-position: fixed;
-top: 8px;
-right: 9px;
-
+  content: "\e64b";
+  margin-left: 10px;
 }
 
-.user {
-
+.ti-menu {
   position: fixed;
   top: 8px;
-  right: 20px;
+  right: 9px;
+}
+
+.user, .cart, .contact {
+  position: fixed;
+  top: 8px;
   font-size: 28px;
   z-index: 90;
 }
+
 .cart {
-  color: white;
-  position: fixed;
-  top: 8px;
   right: 80px;
-  font-size: 28px;
   z-index: 58;
 }
-i.ti-user {
-  color: white;
-}
-.contact{
-  position: fixed;
+
+.contact {
   top: 10px;
   right: 150px;
-  font-size: 28px;
-  z-index: 90;
 }
-i.ti-headphone-alt{
-  color:white;
-}
-a{
-  text-decoration: none;
-}
-i.ti-shopping-cart{
-  color:white;
-}
-
 
 #banner {
   width: 100%;
   height: 300px;
-  background: url('banner-shoes.jpg') no-repeat center bottom/cover; /* Cắt bớt phần dưới */
+  background: url('banner-shoes.jpg') no-repeat center bottom/cover;
   position: relative;
   z-index: 0;
 }
-
 
 #content {
   width: 100%;
@@ -164,22 +128,22 @@ i.ti-shopping-cart{
   background-color: rgba(180, 151, 151, 0.411);
   position: relative;
   z-index: 1;
+  padding: 0;
 }
 
 #content h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin: -30px 0 20px;
   color: white;
   background-color: #000;
   padding: 10px 20px;
-  margin-top: -30px;
-  z-index: 2;
+  z-index: 20;
 }
 
 .section {
-  margin-bottom: 40px;
-  max-width: 95%; /* Chiều rộng tối đa */
-  margin: 0 auto; /* Căn giữa theo chiều ngang */
+  margin-bottom: px;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .section h2 {
@@ -203,7 +167,7 @@ i.ti-shopping-cart{
 }
 
 .product-item {
-  width: 300px;
+  width: 17%;
   margin: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -211,7 +175,6 @@ i.ti-shopping-cart{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
-  color: black;
   background-color: rgba(187, 203, 207, 0.534);
   position: relative;
   z-index: 0;
@@ -253,63 +216,50 @@ i.ti-shopping-cart{
 }
 
 .footer {
-  background-color: black ;
-  padding: 0px;
+  background-color: black;
+  padding: 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  color:white;  
+  color: white;
 }
-.company-info p{
-  margin-top:10px;
-  margin-bottom: 10px;
+
+.company-info p, .contact-info p {
+  margin: 5px 0;
 }
+
 .social-links {
   display: flex;
-
 }
+
 .social-links a {
   color: white;
   font-size: 35px;
-  margin-right: 20px;
-  text-decoration: none;
-  transition: color 0.3s; 
-  float:left;
-  margin-top: 10px;
+  margin: 10px 20px 0 0;
+  transition: color 0.3s;
 }
 
 .social-links a:hover {
-  color:  burlywood; 
+  color: burlywood;
 }
 
-.company-info,
-.contact-info
-{
+.company-info, .contact-info {
   flex-basis: 40%;
 }
-.contact-info p{
-  margin-top:5px;
+
+.contact-info a {
+  color: white;
 }
-.contact-info a{
-  text-decoration: none;
-  color:white;
-}
+
 .copyright {
   width: 100%;
   text-align: center;
   margin-top: 20px;
 }
+
 p.i4 {
   font-size: x-large;
   font-weight: 700;
-}
-
-/* Copyright */
-.copyright {
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-  color: white;
 }
 
 @media (max-width: 768px) {
@@ -317,7 +267,7 @@ p.i4 {
     display: none;
   }
 
-  #mobilemenu {
+  #mobilemenu, .ti-menu {
     display: block;
     font-size: 28px;
     cursor: pointer;
@@ -326,10 +276,6 @@ p.i4 {
   .user, .cart {
     font-size: 20px;
     right: 50px;
-  }
-
-  .ti-menu {
-    display: block;
   }
 
   #nav li {
@@ -354,6 +300,15 @@ p.i4 {
   }
 }
 
+/* Modal Styles */
+/* Đặt lại các giá trị padding và margin của tất cả các phần tử */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Định kiểu cho modal */
 .modal {
   display: none; 
   position: fixed; 
@@ -363,57 +318,60 @@ p.i4 {
   width: 100%;
   height: 100%;
   overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  background-color: rgba(0, 0, 0, 0.4); /* Màu nền mờ */
+  backdrop-filter: blur(5px); /* Hiệu ứng làm mờ nền */
 }
 
+/* Định kiểu cho nội dung của modal */
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; 
+  background-color: #fff;
+  margin: 5% auto; 
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid #ddd;
   width: 80%; 
-  max-width: 600px;
+  max-width: 800px;
+  border-radius: 10px; /* Bo góc */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+  animation: fadeIn 0.3s ease-in-out; /* Hiệu ứng fade in */
 }
 
+/* Hiệu ứng fade in cho modal */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Định kiểu cho nút đóng modal */
 .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
   cursor: pointer;
 }
 
-.modal-header {
-  text-align: center;
+.close:hover {
+  color: #000;
 }
 
+/* Định kiểu cho tiêu đề của modal */
+.modal-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Định kiểu cho nội dung của modal */
 .modal-body {
   margin: 20px 0;
 }
 
-.modal-footer {
-  text-align: center;
-}
-
-.modal-footer button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-}
-
-.modal-footer button:hover {
-  background-color: #555;
-}
-
+/* Định kiểu cho phần carousel */
 .carousel {
   position: relative;
   margin-bottom: 20px;
@@ -421,7 +379,8 @@ p.i4 {
 
 .carousel img {
   width: 100%;
-  height: auto;
+  height: auto%;
+  border-radius: 10px;
 }
 
 .prev, .next {
@@ -435,7 +394,6 @@ p.i4 {
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
@@ -446,13 +404,41 @@ p.i4 {
 
 .prev {
   left: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 0 3px 3px 0;
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* Định kiểu cho các thông tin sản phẩm */
+#product-name, #product-price {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Định kiểu cho các nhóm form */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Định kiểu cho các phần chọn size và số lượng */
 .size-select, .quantity-select {
   margin-bottom: 20px;
 }
@@ -465,82 +451,140 @@ p.i4 {
 .size-select select, .quantity-select input {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+/* Định kiểu cho phần chân của modal */
+.modal-footer {
+  text-align: center;
+}
+
+.modal-footer button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e91e63;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.modal-footer button:hover {
+  background-color: #d81b60;
+}
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.carousel img {
+  width: 100%;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 0 3px 3px 0;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Size and Quantity Select */
+.size-select, .quantity-select {
+  margin-bottom: 20px;
+}
+
+.size-select label, .quantity-select label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.size-select select, .quantity-select input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 #bannerGT {
   width: 100%;
-  height: 100%; /* hoặc bạn có thể thay đổi chiều cao tùy ý */
-  overflow: hidden; /* để ẩn phần nào của hình ảnh vượt ra khỏi khung hình */
+  height: 100%;
+  overflow: hidden;
 }
 
 #bannerGT img {
   width: 100%;
-  height: auto; /* để tỷ lệ chiều cao được tự động điều chỉnh để phù hợp với chiều rộng */
-  object-fit: cover; /* để hình ảnh tự điều chỉnh sao cho vừa với khung hình */
-}/* Định kiểu cho danh sách sub_more */
-.sub_more {
-  list-style-type: none; /* Loại bỏ ký hiệu đầu dòng */
-  padding: 0;
-  margin: 0;
-  background-color: #fff; /* Nền trắng */
-  border: 1px solid #ddd; /* Đường viền nhạt */
-  border-radius: 4px; /* Bo góc */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  object-fit: cover;
 }
 
-/* Định kiểu cho các liên kết bên trong sub_more */
+/* Sub More Styles */
+.sub_more {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .sub_more li a {
   display: block;
   padding: 10px 16px;
-  color: #333; /* Màu chữ tối */
-  text-decoration: none; /* Loại bỏ gạch chân */
-  transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu mượt mà */
-  font-size: 16px; /* Cỡ chữ */
-  font-weight: 500; /* Độ dày chữ */
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-/* Hiệu ứng khi di chuột vào các liên kết */
 .sub_more li a:hover {
-  background-color: #f1f1f1; /* Màu nền khi di chuột vào */
-  color: #e91e63; /* Màu chữ khi di chuột vào */
-  border-radius: 4px; /* Bo góc */
+  background-color: #f1f1f1;
+  color: #e91e63;
+  border-radius: 4px;
 }
 
+/* Scroll Images */
 #scroll-images {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -5px;
 }
 
 #scroll-images img {
-  width: calc(100% / 3); /* Chia đều chiều rộng cho 3 ảnh mỗi hàng */
-  height: auto; /* Chiều cao tự động điều chỉnh để giữ tỷ lệ khung hình */
-  object-fit: cover; /* Đảm bảo hình ảnh không bị vỡ */
-}
-/* Đảm bảo tất cả các phần tử được đặt lại padding và margin */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  width: calc(33.333% - 10px);
+  margin: 5px;
+  object-fit: cover;
+  height: auto;
 }
 
-html {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#content {
-  padding: 0px;
-}
-
-.section {
-  margin-bottom: 80px;
-}
-
+/* News Section */
 .news-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Khoảng cách giữa các mục */
+  gap: 20px;
 }
 
 .news-item {
@@ -549,7 +593,7 @@ html {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: calc(33.333% - 20px); /* Đảm bảo 3 mục trong 1 hàng */
+  width: calc(33.333% - 20px);
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
@@ -559,8 +603,7 @@ html {
 
 .news-item img {
   width: 100%;
-  height: auto;
-  object-fit: cover; /* Giúp hình ảnh vừa với khung */
+  object-fit: cover;
 }
 
 .news-item h3 {
@@ -580,7 +623,6 @@ html {
   padding: 10px 20px;
   background-color: #000;
   color: #fff;
-  text-decoration: none;
   border-radius: 4px;
   transition: background-color 0.3s;
 }
@@ -593,23 +635,24 @@ html {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
 #bannernews {
   width: 100%;
   height: 400px;
-  margin-top: 46px; /* Để phù hợp với header cố định */
+  margin-top: 46px;
   position: relative;
   z-index: 0;
-  overflow: hidden; /* Đảm bảo không bị tràn ra khỏi phần tử cha */
+  overflow: hidden;
 }
 
 #bannernews img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Lấp đầy khung hình mà không bị cắt bớt */
+  object-fit: cover;
 }
 
 .image-container {
   display: flex;
-  justify-content: center; /* Căn giữa theo chiều ngang */
-  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center;
+  align-items: center;
 }
