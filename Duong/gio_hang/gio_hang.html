@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng </title>
+    <link rel="stylesheet" href="/Duong//gio_hang/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/icon/themify-icons-font/themify-icons/themify-icons.css">
+    <style>
+        .header {
+            height: 46px;
+            width: 100%;
+            background-color: #000;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            color:white;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <div id="header" class="header"></div>
+    
+<!-- content -->
+        <div class="content">
+            <div class="container">
+                <h1>Giỏ hàng của bạn hiện đang trống.</h1>
+            <div class="ti-shopping-cart cart1">
+            </div>
+                <button class="continue-btn">
+                    <a href="/Duong/index_trangchu.html">Tiếp tục mua sắm</a>
+                    </button>
+            </div>
+                   </div>
+
+
+
+<!-- the div cua main  -->
+    </div> 
+    <div id="footer" class="footer"></div>
+    <!-- menu -->
+<script>
+    // Function to load HTML content into a div
+    function loadHTMLContent(url, elementId) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById(elementId).innerHTML = data;
+            })
+            .catch(error => console.error('Error loading HTML content:', error));
+    }
+  
+    // Load header and footer
+    loadHTMLContent('/Duong/header.html', 'header');
+    loadHTMLContent('/Duong/footer.html', 'footer');
+  </script>
+
+</body>
+</html>
