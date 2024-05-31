@@ -192,9 +192,11 @@ i.ti-user, i.ti-headphone-alt, i.ti-shopping-cart {
 }
 
 .product-item p {
+  text-align: center;
   font-size: 16px;
-  color: #e91e63;
+  color: #303304;
   margin-bottom: 10px;
+
 }
 
 .product-item button {
