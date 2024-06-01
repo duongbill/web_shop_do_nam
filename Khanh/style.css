@@ -195,11 +195,16 @@ img {
 }
 
 .product-item p {
+  text-align: center;
   font-size: 16px;
-  color: #e91e63;
+  color: #303304;
   margin-bottom: 10px;
+<<<<<<< HEAD
   justify-content: center; 
   align-items: center;  
+=======
+
+>>>>>>> 15c4013f9d8f7ed58140520af43c57bf9c0491e6
 }
 
 .product-item button {
