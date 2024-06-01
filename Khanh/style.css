@@ -125,10 +125,13 @@ i.ti-user, i.ti-headphone-alt, i.ti-shopping-cart {
 #content {
   width: 100%;
   min-height: 400px;
-  background-color: rgba(180, 151, 151, 0.411);
+  background-color: white;
   position: relative;
   z-index: 1;
   padding: 0;
+}
+img {
+  width: 99%;
 }
 
 #content h2 {
@@ -195,6 +198,8 @@ i.ti-user, i.ti-headphone-alt, i.ti-shopping-cart {
   font-size: 16px;
   color: #e91e63;
   margin-bottom: 10px;
+  justify-content: center; 
+  align-items: center;  
 }
 
 .product-item button {
@@ -655,4 +660,8 @@ p.i4 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+p {
+  text-align: justify;
+  text-justify: inter-word;
 }
