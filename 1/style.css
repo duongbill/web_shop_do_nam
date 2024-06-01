@@ -154,7 +154,9 @@ main section {
     flex-wrap: wrap;
     justify-content: center;
 }
-
+#products{
+  margin-top: 20px;
+}
 .product {
     background-color: #fff;
     border: 1px solid #ddd;
