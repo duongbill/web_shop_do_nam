@@ -3,20 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liên hệ - [Tên trang web của bạn]</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Liên Hệ </title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0; /* Loại bỏ margin mặc định của body */
+            padding: 0; /* Loại bỏ padding mặc định của body */
+        }
+
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 800px; 
+            margin: 0 auto; 
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 10px;
+            display: flex; 
+            align-items: center; 
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: #007bff;
+            font-size: 1.2em; 
+        }
+
+        .contact-form {
+            margin-bottom: 30px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold; 
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .contact-form textarea {
+            height: 100px;
+        }
+
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; 
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .header {
+            height: 46px;
+            width: 100%;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .header h1 {
+            margin: 0; 
+            font-size: 1.5em; 
+        }
+
+        .footer {
+            margin-top: 20px;
+            background-color: #f0f0f0;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0; 
+            width: 100%;
+        }
+    </style>
 </head>
-<div class="banner">
-    <img src="https://theme.hstatic.net/200000690725/1001078549/14/topbar_img_mb.jpg?v=370" alt="Banner image" style="width: 1480px;">
-</div>
+
 <body>
 
-    <header>
-        <div class="container">
-            <h1 class="text-center mt-5 mb-4">Liên hệ</h1>
-        </div>
+    <header class="header">
+        <h1>Liên hệ</h1>
     </header>
 
     <main>
@@ -26,10 +132,10 @@
                     <div class="card shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title">Thông tin liên hệ</h5>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><i class="fas fa-map-marker-alt"></i> Địa chỉ: [Địa chỉ của bạn]</li>
-                                <li class="list-group-item"><i class="fas fa-phone-alt"></i> Điện thoại: [Số điện thoại của bạn]</li>
-                                <li class="list-group-item"><i class="fas fa-envelope"></i> Email: [Email của bạn]</li>
+                            <ul class="contact-info">
+                                <li><i class="fas fa-map-marker-alt"></i> Địa chỉ: 888, Hoàng Quốc Việt, Cầu Giấy, Hà Nội</li>
+                                <li><i class="fas fa-phone-alt"></i> Điện thoại: 098-888-8888</li>
+                                <li><i class="fas fa-envelope"></i> Email: 8shop@gmail.com.vn</li>
                             </ul>
                         </div>
                     </div>
@@ -45,89 +151,4 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="email">Email:</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Email:" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="Sđt">Số điện thoại:</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Sđt:" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="Noidung">Nội dung:</label>
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Nội dung tin nhắn" required></textarea>
-                                </div>
-                            </main>
-                                <style>
-                                  .footer {
-                                    background-color: #f2f2f2;
-                                    padding: 40px 0;
-                                  }
-                                  
-                                  .footer-container {
-                                    max-width: 1200px;
-                                    margin: 0 auto;
-                                    display: flex;
-                                    justify-content: space-between;
-                                    flex-wrap: wrap;
-                                  }
-                                  
-                                  .footer-col {
-                                    width: 18%;
-                                  }
-                                  
-                                  .footer-col h3 {
-                                    margin-bottom: 20px;
-                                    font-weight: bold;
-                                  }
-                                  
-                                  .footer-col ul {
-                                    list-style: none;
-                                    padding: 0;
-                                  }
-                                  
-                                  .footer-col ul li {
-                                    margin-bottom: 10px;
-                                  }
-                                  
-                                  .social-links a {
-                                    display: inline-block;
-                                    margin-right: 10px;
-                                    color: #333;
-                                    font-size: 20px;
-                                  }
-                                  
-                                  .footer-bottom {
-                                    text-align: center;
-                                    margin-top: 30px;
-                                    font-size: 14px;
-                                    color: #666;
-                                  }</style>
-                                  <script></script>
-                                 
-                                   
-      <div class="footer">
-        <div class="company-info">
-          <h1>Thời trang nam EIGHT SHOP</h1>
-          <p>Hệ thống thời trang cho phái mạnh hàng đầu Việt Nam, hướng tới phong cách nam tính, lịch lãm và trẻ trung phù hợp cho mọi khách hàng</p>
-          <div class="social-links">
-            <a href="https://www.facebook.com/LouisVuitton"><i class="ti-facebook"></i></a>
-            <a href="https://twitter.com/LouisVuitton?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="ti-twitter"></i></a>
-            <a href="https://www.instagram.com/louisvuitton/"><i class="ti-instagram"></i></a>
-          </div>
-          
-        </div>
-        <div class="contact-info">
-            <p class="i4">Thông tin liên hệ</p>
-          <p>Địa chỉ: 888, Hoàng Quốc Việt, Cầu Giấy, Hà Nội</p>
-          <p>Điện thoại: 098-888-8888</p>
-          <p>Email: <a href="mailto:billduongg@gmail.com">8shop@gmail.com.vn</a></p>
-          
-        </div> 
-        <div class="copyright">
-          <p>@2024 EIGHT SHOP by NguyenHaiDuong </p>
-        </div>
-    </div>
-    <script src="app.js"></script>
-                                
-                                    <script src="app.js"></script>
-                                </body>
-                                </html>
+                                    <input type="email" class="form-control" id="email" placeholder
